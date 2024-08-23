@@ -160,7 +160,7 @@ body {
 .instructons-1 {
   color: #ffffff;
   text-align: center;
-  font-family: Kadwa-Bold, sans-serif;
+  font-family: Kadwa, sans-serif;
   font-size: 14px;
   font-weight: 700;
   min-width: 395px;
@@ -386,6 +386,65 @@ body {
 
   .instructons-1 {
     font-size: 10px;
-    max-width: 10px;
+    max-width: 150px;
+    min-width: 50px;
+    line-height: 15px;
+  }
+
+  .back-ground {
+    width: 250px;
+    height: auto; /* Let the background size adjust dynamically */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontal centering */
+    justify-content: center; /* Vertical centering */
+    position: relative; /* Ensure positioning relative to the container */
+    margin: 0 auto; /* Center the background itself */
+  }
+
+  .label-1 {
+    font-size: 15.416px;
+    margin: 0 auto; /* Automatically adjust the margins */
+    text-align: center; /* Ensure the text inside is centered */
+    width: 100%; /* Ensure it takes up full width */
+    height: auto; /* Let it size automatically */
+  }
+
+  .in-put-1 {
+    width: 200px;
+    height: 40px;
+  }
+
+  .label-2 {
+    font-size: 15.416px;
+    margin: 0 auto; /* Automatically adjust the margins */
+    text-align: center; /* Ensure the text inside is centered */
+    width: 100%; /* Ensure it takes up full width */
+    height: auto; /* Let it size automatically */
+  }
+  .in-put-2 {
+    width: 200px;
+    height: 40px;
+  }
+  .label-3 {
+    font-size: 15.416px;
+    margin: 0 auto; /* Automatically adjust the margins */
+    text-align: center; /* Ensure the text inside is centered */
+    width: 100%; /* Ensure it takes up full width */
+    height: auto; /* Let it size automatically */
+  }
+  .in-put-3 {
+    width: 200px;
+    height: 40px;
+  }
+  .back-ground-2 {
+    width: 250px;
+    height: auto; /* Let the background size adjust dynamically */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontal centering */
+    justify-content: center; /* Vertical centering */
+    position: relative; /* Ensure positioning relative to the container */
+    margin: 0 auto; /* Center the background itself */
   }
 }
