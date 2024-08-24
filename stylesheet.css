@@ -447,4 +447,40 @@ body {
     position: relative; /* Ensure positioning relative to the container */
     margin: 0 auto; /* Center the background itself */
   }
+
+  @media (max-width: 400px) {
+    .h-1 {
+      font-size: 30px; /* Make the font size larger */
+      line-height: 0.1;
+      margin-bottom: 10px; /* Remove any extra margins */
+      padding: 0; /* Remove any padding */
+      height: auto; /* Ensure dynamic height */
+    }
+
+    .h-1-span,
+    .h-1-span2,
+    .h-1-span3 {
+      font-size: 40px; /* Consistent font size for all spans */
+      line-height: 1; /* Tighten up the spacing between spans */
+      margin: 0; /* Remove margin between spans */
+      padding: 0; /* Remove padding between spans */
+    }
+
+    .p-1 {
+      font-size: 15px;
+      line-height: 30px;
+      margin-top: 0; /* Ensure no top margin to bring closer to .h-1 */
+      margin-bottom: 0px; /* Adjust bottom margin if needed */
+      min-width: 250px;
+      max-width: 250px;
+    }
+
+    .instructons-1 {
+      padding-top: 20px;
+      font-size: 10px;
+      max-width: 150px;
+      min-width: 50px;
+      line-height: 15px;
+    }
+  }
 }
