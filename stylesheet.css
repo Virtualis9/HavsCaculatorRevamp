@@ -163,6 +163,78 @@ input::placeholder {
   background-color: #c0c0c0;
 }
 
+.ellipse-3,
+.ellipse-3 * {
+  box-sizing: border-box;
+}
+.ellipse-3 {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 40px solid #252539;
+  border-color: #252539 #252539 #252539 transparent;
+  background-color: transparent;
+  box-sizing: border-box;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.havsScore1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: Kadwa, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  min-width: 395px;
+  position: relative;
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  transform: rotate(90deg);
+}
+.havsScore2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: Kadwa, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  min-width: 395px;
+  position: relative;
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  transform: rotate(-360deg);
+  margin-bottom: 50px;
+}
+
+.havsAdvice {
+  color: #ffffff;
+  text-align: center;
+  font-family: Kadwa, sans-serif;
+  font-size: 21.416px;
+  font-weight: 700;
+  min-width: 395px;
+  position: relative;
+  margin: 20px auto;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 25px;
+  transform: rotate(-360deg);
+  margin-bottom: 50px;
+}
+
 .instructons-1,
 .instructons-1 * {
   box-sizing: border-box;
