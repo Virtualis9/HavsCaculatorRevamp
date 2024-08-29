@@ -10,6 +10,29 @@ function updateHistory (total) {
         result +=history[i]
     }
     document.getElementById("total").value = result;
+
+    scoreAnimation(result)
+}
+
+function scoreAnimation (result) {
+    
+   
+    const number = document.getElementById('havsScore3')
+    
+    let counter = 0
+   
+    setInterval(() =>{
+        if (counter === result){
+            clearInterval;
+        } else {
+            counter += 1
+            number.textContent = `${counter}`
+        }
+        
+    }, 30)
+
+    
+   
 }
 
 function calculate (inputElementByID1, inputElementByID2){
@@ -20,6 +43,7 @@ function calculate (inputElementByID1, inputElementByID2){
     const total = Math.round(points * time)
   
     updateHistory(total)
+    
 
 }
 
@@ -37,8 +61,5 @@ function ALV (ALVInput, ALVOutput) {
     
     return;
 
-
-
-
-
 }
+

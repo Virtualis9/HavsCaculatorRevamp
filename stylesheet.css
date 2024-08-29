@@ -172,7 +172,7 @@ input::placeholder {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 40px solid #252539;
+  border: 40px solid green;
   border-color: #252539 #252539 #252539 transparent;
   background-color: transparent;
   box-sizing: border-box;
@@ -181,6 +181,65 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+}
+
+.skill {
+  padding: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.outer {
+  width: 160px;
+  height: 160px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  padding: 20px;
+  position: relative;
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    /* Subtle darker inset shadow */ inset -4px -4px 6px -1px rgba(0, 0, 0, 0.7),
+    /* More pronounced darker inset shadow */ 0.5px 0.5px 0px rgba(0, 0, 0, 0.1),
+    /* Light outer shadow for slight highlight */ -0.5px -0.5px 0px
+      rgba(0, 0, 0, 0.05); /* Light outer shadow on the opposite side */
+  padding: 20px;
+  position: relative;
+}
+
+svg {
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+}
+
+circle {
+  fill: none;
+  stroke: url(#gradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  animation: anim 2s linear forwards;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 400;
+  }
 }
 
 .havsScore1 {
@@ -199,6 +258,7 @@ input::placeholder {
   line-height: 25px;
   transform: rotate(90deg);
 }
+
 .havsScore2 {
   color: #ffffff;
   text-align: center;
@@ -215,6 +275,18 @@ input::placeholder {
   line-height: 25px;
   transform: rotate(-360deg);
   margin-bottom: 50px;
+}
+
+.havsScore3 {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 35px;
+}
+
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .havsAdvice {

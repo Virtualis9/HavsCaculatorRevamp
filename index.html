@@ -7,64 +7,72 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
-    <script src="Script.js"></script>
-    <title>HAVSCalculator</title>
+    <title>HAVS Calculator</title>
 </head>
 <body>
     <div class="small-logo">
         <span>
-          <span class="small-logo-span">HAVS</span>
-          <span class="small-logo-span2">Calculator.com</span>
+            <span class="small-logo-span">HAVS</span>
+            <span class="small-logo-span2">Calculator.com</span>
         </span>
-      </div>
-      <div class="h-1">
+    </div>
+    
+    <div class="h-1">
         <span>
-          <span class="h-1-span">FREE</span>
-          <span class="h-1-span2">HAVS</span>
-          <span class="h-1-span3">CALCULATOR</span>
+            <span class="h-1-span">FREE</span>
+            <span class="h-1-span2">HAVS</span>
+            <span class="h-1-span3">CALCULATOR</span>
         </span>
-      </div>
-      <div class="p-1">
+    </div>
+    
+    <div class="p-1">
         <span>
-          <span class="p-1-span">Calculating your hand-arm vibration syndrome (</span>
-          <span class="p-1-span2">HAVS</span>
-          <span class="p-1-span3">
-            ) exposure can be complicated and time-consuming. To make it easier, use
-            our
-          </span>
-          <span class="p-1-span4">FREE</span>
-          <span class="p-1-span5">
-            tool below to help you stay within safe limits and protect your
-            well-being. It will also ensure you remain compliant with health and
-          </span>
-          <span class="p-1-span6">safety</span>
-          <span class="p-1-span7">
-            laws.
-            <br />
-            Want an even better solution? Or simply want a chat to find out more about
-            us? Hit the Sign up button and be the first to our beta SaaS
-          </span>
-          <span class="p-1-span8">HAVS</span>
-          <span class="p-1-span9">Solution software!</span>
+            <span class="p-1-span">Calculating your hand-arm vibration syndrome (</span>
+            <span class="p-1-span2">HAVS</span>
+            <span class="p-1-span3">) exposure can be complicated and time-consuming. To make it easier, use our</span>
+            <span class="p-1-span4">FREE</span>
+            <span class="p-1-span5">tool below to help you stay within safe limits and protect your well-being. It will also ensure you remain compliant with health and</span>
+            <span class="p-1-span6">safety</span>
+            <span class="p-1-span7">laws. <br /> Want an even better solution? Or simply want a chat to find out more about us? Hit the Sign up button and be the first to our beta SaaS</span>
+            <span class="p-1-span8">HAVS</span>
+            <span class="p-1-span9">Solution software!</span>
         </span>
-      </div>
-      <div class="rectangle-4">
+    </div>
+    
+    <div class="rectangle-4">
         <div class="sign-up-here">Sign Up Here</div>
-      </div>
-      <div class="animationBar">
-        <div class="ellipse-3">
-          <div class="havsScore1">0</div>
-          
+    </div>
+
+    <div class="skill">
+        <div class="outer">
+            <div class="inner">
+                <div class="havsScore3" id="havsScore3">
+                  
+                </div>
+            </div>
         </div>
-        <div class="havsScore2">Good!</div>
+        <svg height="160px" width="160px" xmlns="http://www.w3.org/2000/svg">
+          <defS>
+            <linearGradient id="gradientColor">
+              <stop offset="0%" stop-color="red" />
+              <stop offset="100%" stop-color="green">
+            </linearGradient>
+          </defS>
+          <circle r="70" cx="80" cy="80" fill="red" />
+        </svg>
+    </div>
+
+    
+    
+
+    <div class="havsScore2">Good!</div>
         <div class="havsAdvice">Try and stay below 100 Points</div>
-      </div>
-      <div class="instructons-1">
-        Enter Your tools Magnitude rating and how long you used your tool to find out
-        your points. you can keep adding different ratings and times and the total
-        points will keep adding up as long as the page has not been refreshed.
-      </div>
-      <div class="cal-1">
+
+    <div class="instructons-1">
+        Enter your tool's magnitude rating and how long you used your tool to find out your points. You can keep adding different ratings and times, and the total points will keep adding up as long as the page has not been refreshed.
+    </div>
+    
+    <div class="cal-1">
         <div class="back-ground">
             <label class="label-1">Enter Magnitude Rating</label>
             <input class="in-put-1" id="Vibration" placeholder="Enter Magnitude Rating Here">
@@ -73,18 +81,18 @@
             <label class="label-3">Total Points</label>
             <input class="in-put-3" id="total" disabled>
             <div class="rectangle-4">
-                <div class="calculate" onclick="calculate('Vibration' , 'Time', 'total' )">Calculate</div>
+                <div class="calculate" onclick="calculate('Vibration', 'Time', 'total')">Calculate</div>
             </div>
         </div>
-      </div>
-      <div class="instructons-1">
-        want to know how long you can safely use your tool!
-        <br />
-        Its recommended to never exceed 100 points
-        <br />
-        this calculator wil
-      </div>
-      <div class="cal-2">
+    </div>
+    
+    <div class="instructons-1">
+        Want to know how long you can safely use your tool! <br />
+        It’s recommended to never exceed 100 points. <br />
+        This calculator will help you determine safe usage time.
+    </div>
+    
+    <div class="cal-2">
         <div class="back-ground-2">
             <label class="label-2">Enter Magnitude Rating</label>
             <input class="in-put-2" id="ALVInput" placeholder="Enter Magnitude Rating">
@@ -93,6 +101,8 @@
                 <div class="calculate" onclick="ALV('ALVInput', 'ALVOutput')">Calculate</div>
             </div>
         </div>
-      </div>
+    </div>
+    
+    <script src="Script.js"></script>
 </body>
 </html>
