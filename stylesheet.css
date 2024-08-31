@@ -1,7 +1,7 @@
 body {
   font-family: Kadwa;
   margin: 0;
-  background: #141420;
+  background: rgb(32, 32, 32);
   min-height: 100vh; /* Ensure the body takes full viewport height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 100px;
@@ -139,6 +139,7 @@ input::placeholder {
   height: auto; /* Allow flexible height */
   margin: 20px auto;
   cursor: pointer;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 
 .sign-up-here,
@@ -197,8 +198,7 @@ input::placeholder {
 .outer {
   width: 160px;
   height: 160px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(0, 0, 0, 0.7);
+
   border-radius: 50%;
   padding: 20px;
   position: relative;
@@ -211,35 +211,28 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    /* Subtle darker inset shadow */ inset -4px -4px 6px -1px rgba(0, 0, 0, 0.7),
-    /* More pronounced darker inset shadow */ 0.5px 0.5px 0px rgba(0, 0, 0, 0.1),
-    /* Light outer shadow for slight highlight */ -0.5px -0.5px 0px
-      rgba(0, 0, 0, 0.05); /* Light outer shadow on the opposite side */
+
   padding: 20px;
   position: relative;
 }
 
 svg {
   position: absolute;
-
   width: 160px;
   height: 160px;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+  transform: rotate(90deg);
 }
 
 circle {
   fill: none;
   stroke: url(#gradientColor);
-  stroke-width: 20px;
+  stroke-width: 40px;
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
-  animation: anim 2s linear forwards;
-}
-
-@keyframes anim {
-  100% {
-    stroke-dashoffset: 400;
-  }
+  animation: anim 1s linear forwards;
 }
 
 .havsScore1 {
@@ -260,7 +253,7 @@ circle {
 }
 
 .havsScore2 {
-  color: #ffffff;
+  color: #23fc00;
   text-align: center;
   font-family: Kadwa, sans-serif;
   font-size: 50px;
@@ -279,8 +272,16 @@ circle {
 
 .havsScore3 {
   font-weight: 700;
-  color: #ffffff;
+  color: #23fc00;
+  background: rgb(17, 17, 17);
   font-size: 35px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
 }
 
 .svg-background {
@@ -329,13 +330,14 @@ circle {
 
 /* Position and layout for .back-ground and other child elements */
 .back-ground {
-  background: #252539;
+  background: rgb(31, 31, 31);
   border-radius: 15px;
+  border: 2px solid black;
   width: 395px;
   height: 550px;
   position: relative; /* Change from absolute to relative */
   margin: 0 auto; /* Center align if constrained */
-  box-shadow: 15px 13px 31.8px -17px rgba(141, 141, 158, 1);
+  box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
   margin-bottom: 50px;
 }
 
@@ -366,7 +368,9 @@ circle {
   border: none;
 }
 .in-put-1 {
-  background: #141420;
+  background: rgb(17, 17, 17);
+  border-radius: 15px;
+  border: 2px solid black;
   position: relative;
   margin: auto;
   width: 350px;
@@ -401,7 +405,9 @@ circle {
   border: none;
 }
 .in-put-2 {
-  background: #141420;
+  background: rgb(17, 17, 17);
+  border-radius: 15px;
+  border: 2px solid black;
   position: relative;
   margin: auto;
   width: 350px;
@@ -436,7 +442,9 @@ circle {
   border: none;
 }
 .in-put-3 {
-  background: #141420;
+  background: rgb(17, 17, 17);
+  border-radius: 15px;
+  border: 2px solid black;
   position: relative;
   margin: auto;
   width: 350px;
@@ -480,7 +488,7 @@ circle {
   box-sizing: border-box;
 }
 .calculate {
-  color: #000000;
+  color: black;
   text-align: center;
   font-family: Kadwa, sans-serif;
   font-size: 21.41642951965332px;
@@ -498,7 +506,7 @@ circle {
   height: 350px;
   position: relative; /* Change from absolute to relative */
   margin: 0 auto; /* Center align if constrained */
-  box-shadow: 15px 13px 31.8px -17px rgba(141, 141, 158, 1);
+  box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
 }
 
 @media (max-width: 1162px) {
