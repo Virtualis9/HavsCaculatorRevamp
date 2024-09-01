@@ -198,7 +198,6 @@ input::placeholder {
 .outer {
   width: 160px;
   height: 160px;
-
   border-radius: 50%;
   padding: 20px;
   position: relative;
@@ -211,7 +210,6 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
   position: relative;
 }
@@ -221,9 +219,7 @@ svg {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 2px solid black;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
-  transform: rotate(90deg);
+  transform: rotate(-180deg);
 }
 
 circle {
@@ -273,7 +269,7 @@ circle {
 .havsScore3 {
   font-weight: 700;
   color: #23fc00;
-  background: rgb(17, 17, 17);
+  background: transparent;
   font-size: 35px;
   border: none;
   border-radius: 50%;

@@ -4,101 +4,101 @@ const emailError = document.getElementById('emailError');
 const trap = document.getElementById('pot');
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    let advice = document.getElementById('havsAdvice')
+    let advice = document.getElementById('havsAdvice');
     const number = document.getElementById('havsScore3');
     const circle = document.getElementById('animatedCircle');
-    let score = document.getElementById('havsScore2')
+    let score = document.getElementById('havsScore2');
     let counter = 0;
-    const maxCounter = 400; 
-    const maxStrokeDashOffset = 450; 
+    const maxCounter = 400;
+    const minStrokeDashOffset = 230;
+    const maxStrokeDashOffset = 450; // Set minimum stroke dash offset
     let strokeDashOffset = maxStrokeDashOffset;
-    let isCountingUp = true; 
+    let isCountingUp = true;
 
-    
     const intervalId = setInterval(() => {
+        console.log(`Counter: ${counter}`); // Debugging statement
+        console.log(`Stroke Dash Offset: ${strokeDashOffset}`); // Debugging statement
+        
         if (isCountingUp) {
-            strokeDashOffset -= maxStrokeDashOffset / maxCounter;  
+            // Increment the counter and adjust stroke dash offset
             counter += 1;
-            if (counter <= 100){
-                number.style.color = '#23fc00'
-                score.style.color = '#23fc00'
-                score.style.lineHeight = '60px'
-                score.textContent = `Good! `
-                advice.style.color = '#23fc00'
-                advice.textContent = 'try and stay below 100 points'
+            strokeDashOffset = maxStrokeDashOffset - ((counter / maxCounter) * (maxStrokeDashOffset - minStrokeDashOffset));
+
+            // Update styles based on counter value
+            if (counter <= 100) {
+                number.style.color = '#23fc00';
+                score.style.color = '#23fc00';
+                score.style.lineHeight = '60px';
+                score.textContent = `Good! `;
+                advice.style.color = '#23fc00';
+                advice.textContent = 'Try and stay below 100 points';
+            } else if (counter > 100 && counter <= 250) {
+                number.style.color = '#deff12';
+                score.style.color = '#deff12';
+                score.style.lineHeight = '60px';
+                score.textContent = `You exceed 100 points!`;
+                advice.style.color = '#deff12';
+                advice.textContent = 'You need to reassess your exposure to HAVS by law.';
+            } else if (counter > 250) {
+                number.style.color = '#fe0000';
+                score.style.color = '#fe0000';
+                score.style.lineHeight = '60px';
+                score.textContent = `You’re approaching 400 points!`;
+                advice.style.color = '#fe0000';
+                advice.textContent = 'You need to find alternative options.';
             }
 
-            if (counter > 100 && counter <= 250){
-                number.style.color = '#deff12'
-                score.style.color = '#deff12'
-                score.style.lineHeight = '60px'
-                score.textContent = `You exceed 100 points!`
-                advice.style.color = '#deff12'
-                advice.textContent = 'you need to reassess your exposure to HAVS by law.'
-            }
-
-            if (counter > 250){
-                number.style.color = '#fe0000'
-                score.style.color = '#fe0000'
-                score.style.lineHeight = '60px'
-                score.textContent = `you’re approaching 400 points!`
-                advice.style.color = '#fe0000'
-                advice.textContent = 'you need to find alternative options'
-            }
-
-            if (counter === maxCounter) {
-                isCountingUp = false; 
+            // When the counter reaches 400, switch to counting down
+            if (counter >= maxCounter) {
+                isCountingUp = false;
+               
 
             }
         } else {
+            // Decrement the counter and adjust stroke dash offset
+            counter -= 1;
+            const minStrokeDashOffset = 450;
+            const maxStrokeDashOffset = 230; 
+            strokeDashOffset = minStrokeDashOffset + ((counter / maxCounter) * (maxStrokeDashOffset - minStrokeDashOffset));
 
-            if (counter <= 100){
-                number.style.color = '#23fc00'
-                score.style.color = '#23fc00'
-                score.style.lineHeight = '60px'
-                score.textContent = `Good! `
-                advice.style.color = '#23fc00'
-                advice.textContent = 'try and stay below 100 points'
+            // Update styles based on counter value
+            if (counter <= 100) {
+                number.style.color = '#23fc00';
+                score.style.color = '#23fc00';
+                score.style.lineHeight = '60px';
+                score.textContent = `Good! `;
+                advice.style.color = '#23fc00';
+                advice.textContent = 'Try and stay below 100 points';
+            } else if (counter > 100 && counter <= 250) {
+                number.style.color = '#deff12';
+                score.style.color = '#deff12';
+                score.style.lineHeight = '60px';
+                score.textContent = `You exceed 100 points!`;
+                advice.style.color = '#deff12';
+                advice.textContent = 'You need to reassess your exposure to HAVS by law.';
+            } else if (counter > 250) {
+                number.style.color = '#fe0000';
+                score.style.color = '#fe0000';
+                score.style.lineHeight = '60px';
+                score.textContent = `You’re approaching 400 points!`;
+                advice.style.color = '#fe0000';
+                advice.textContent = 'You need to find alternative options.';
             }
-                
-            
 
-            if (counter > 100 && counter <= 250){
-                number.style.color = '#deff12'
-                score.style.color = '#deff12'
-                score.style.lineHeight = '60px'
-                score.textContent = `You exceed 100 points! `
-                advice.style.color = '#deff12'
-                advice.textContent = 'you need to reassess your exposure to HAVS by law.'
-
-            }
-
-            if (counter > 250){
-                number.style.color = '#fe0000'
-                score.textContent = `you’re approaching 400 points!`
-                advice.style.color = '#fe0000'
-                advice.textContent = 'you need to find alternative options'
-            }
-
-            if (counter === maxCounter) {
-                isCountingUp = false; 
-            }
-            counter -= 1;           
-            strokeDashOffset += maxStrokeDashOffset / maxCounter;   
-            if (counter === 0) {
-                clearInterval(intervalId); 
+            // When the counter reaches 0, stop the interval
+            if (counter <= 0) {
+                clearInterval(intervalId);
             }
         }
 
-        
-        number.textContent = `${counter}`; 
-        circle.style.strokeDashoffset = strokeDashOffset; 
+        // Update the displayed number and circle stroke dash offset
+        number.textContent = `${counter}`;
+        circle.style.strokeDashoffset = strokeDashOffset;
 
-    }, 5); 
-
+    }, 5); // Update every 50 milliseconds
 });
 
+    
 function updateHistory (total) {
     history.push(Number(total))
     let result = 0
@@ -110,32 +110,22 @@ function updateHistory (total) {
    
     scoreAnimation(result)
 
-    if (result <= 100){
-        score1.style.color = '#23fc00';
-        
-
-    } else if (result > 100 && result < 250){
-        score1.style.color = '#deff12';
-        score2.style.color = '#deff12';
-        score2.style.lineHeight = '60px'
-        score2.textContent = `You Need To Reassess your expose to HAVS `
-
-    }
-
-
 }
 
 function scoreAnimation(result) {
     const number = document.getElementById('havsScore3');
     const circle = document.getElementById('animatedCircle');
-    const maxStrokeDashOffset = 450; 
     let counter = 0;
+    const minStrokeDashOffset = 230;
+    const maxStrokeDashOffset = 450; 
+    const maxCounter = 400;
+    let strokeDashOffset = maxStrokeDashOffset 
+    circle.style.strokeDashoffset = strokeDashOffset; 
+   
 
     if (result) {
-       
-        circle.style.strokeDashoffset = maxStrokeDashOffset; 
+        strokeDashOffset = maxStrokeDashOffset - ((counter / maxCounter) * (maxStrokeDashOffset - minStrokeDashOffset));
         number.textContent = `${counter}`;
-
         const intervalId = setInterval(() => {
             if (counter === result) {
                 clearInterval(intervalId); 
