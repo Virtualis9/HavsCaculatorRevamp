@@ -496,7 +496,8 @@ circle {
 }
 
 .back-ground-2 {
-  background: #252539;
+  background: rgb(31, 31, 31);
+  border: 2px solid black;
   border-radius: 15px;
   width: 395px;
   height: 350px;

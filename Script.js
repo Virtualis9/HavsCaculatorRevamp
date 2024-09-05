@@ -135,7 +135,7 @@ function scoreAnimation(result) {
                     score.style.lineHeight = '60px';
                     score.textContent = `You exceed 100 points!`;
                     advice.style.color = '#deff12';
-                    advice.textContent = 'You need to reassess your exposure to HAVS by law.';
+                    advice.textContent = 'You need to reassess your exposure to HAVS to reduce your risk of .';
 
                 } else if (counter > 250 ) {
 
@@ -162,7 +162,7 @@ function scoreAnimation(result) {
                 number.style.color = '#fe0000';
                 score.style.color = '#fe0000';
                 score.style.lineHeight = '60px';
-                score.textContent = `You're on 400 points!`;
+                score.textContent = `You're on or above 400 points!`;
                 advice.style.color = '#fe0000';
                 advice.textContent = 'you can not use anymore vibration tools today';
 
@@ -184,6 +184,10 @@ function scoreAnimation(result) {
     }
 }
 
+function signUp () {
+   window.location.href = 'signUp.html'
+}
+
 
     
 function updateHistory (total) {
@@ -193,8 +197,8 @@ function updateHistory (total) {
         result +=history[i]
     }
     document.getElementById("total").value = result;
-  
     scoreAnimation(result)
+
 
 }
 
@@ -224,3 +228,7 @@ function ALV (ALVInput, ALVOutput) {
 
 }
 
+
+function toolList (){
+    
+}
