@@ -330,11 +330,27 @@ circle {
   border-radius: 15px;
   border: 2px solid black;
   width: 395px;
-  height: 550px;
+  height: 650px;
   position: relative; /* Change from absolute to relative */
   margin: 0 auto; /* Center align if constrained */
   box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
   margin-bottom: 50px;
+}
+
+table {
+  background: rgb(31, 31, 31);
+  border-radius: 15px;
+  color: white;
+  border: 2px solid black;
+  padding: 20px;
+  position: relative;
+  box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
+  margin: 0 auto;
+  width: 395px;
+}
+
+td {
+  text-align: center;
 }
 
 /* Adjust positioning of other child elements accordingly */
@@ -452,6 +468,9 @@ circle {
 
 .output {
   color: #ffffff;
+  padding: 20px;
+  border: 1px solid black;
+  background: green;
   text-align: center;
   font-family: Kadwa, sans-serif;
   font-size: 21.41642951965332px;
@@ -500,7 +519,8 @@ circle {
   border: 2px solid black;
   border-radius: 15px;
   width: 395px;
-  height: 350px;
+  height: 270px;
+  margin-bottom: 150px;
   position: relative; /* Change from absolute to relative */
   margin: 0 auto; /* Center align if constrained */
   box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);

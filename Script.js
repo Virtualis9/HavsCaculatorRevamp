@@ -1,7 +1,11 @@
-let history = []; 
+let pointsHistory = []; 
+let toolHistory = [{}]
+
+
 const form = document.querySelector('.form');
 const emailError = document.getElementById('emailError');
 const trap = document.getElementById('pot');
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -188,16 +192,49 @@ function signUp () {
    window.location.href = 'signUp.html'
 }
 
-
-    
 function updateHistory (total) {
-    history.push(Number(total))
+    pointsHistory.push(Number(total))
     let result = 0
-    for(let i = 0; i < history.length; i++){
-        result +=history[i]
+    for(let i = 0; i < pointsHistory.length; i++){
+        result +=pointsHistory[i]
     }
     document.getElementById("total").value = result;
     scoreAnimation(result)
+
+}
+
+
+function updateToolHistory (total){
+
+    const name = document.getElementById('toolName').value;
+    const vibration = document.getElementById('Vibration').value;
+    const time = document.getElementById('Time').value;
+    const points = total;
+    const tbodyEl = document.querySelector('tbody')
+    tbodyEl.innerHTML += 
+        `<tr>
+            <td>
+                ${name}
+            </td>
+            <td>
+                ${vibration}
+            </td>
+            <td>
+                ${time}
+            </td>
+            <td>
+                ${points}
+            </td>
+        </tr>`;
+
+    
+    toolHistory.push({
+        name: name,
+        vibration: vibration,
+        TriggerTime: time,
+        points: points
+
+    })
 
 
 }
@@ -208,8 +245,8 @@ function calculate (inputElementByID1, inputElementByID2){
     const points = (vibration * vibration) * 2
     const time = mins/60
     const total = Math.round(points * time)
-  
     updateHistory(total)
+    updateToolHistory(total)
 }
 
 // Action Limit Value (ALV) 
@@ -228,7 +265,4 @@ function ALV (ALVInput, ALVOutput) {
 
 }
 
-
-function toolList (){
-    
-}
+console.log(toolHistory)

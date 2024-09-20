@@ -16,7 +16,6 @@
             <span class="small-logo-span2">Calculator.com</span>
         </span>
     </div>
-    
     <div class="h-1">
         <span>
             <span class="h-1-span">FREE</span>
@@ -24,7 +23,6 @@
             <span class="h-1-span3">CALCULATOR</span>
         </span>
     </div>
-    
     <div class="p-1">
         <span>
             <span class="p-1-span">Struggling with complex  (</span>
@@ -34,11 +32,9 @@
             <span class="p-1-span5">tool below to stay safe and compliant</span>
             <br />
             <span class="p-1-span7">Manage a business? Protect your workforce with our SaaS and ace your next HSE audit.<br> Sign up to learn more!</span> 
-          
         </span>
     </div>
-    
-    <div class="rectangle-4">
+    <div onclick="signUp()" class="rectangle-4">
         <div class="sign-up-here">Sign Up Here</div>
     </div>
 
@@ -61,19 +57,18 @@
           <circle id="animatedCircle" r="70" cx="80" cy="80" fill="red" />
         </svg>
     </div>
-
-    
-    
-
     <div class="havsScore2" id="havsScore2">Good!</div>
         <div class="havsAdvice" id=havsAdvice>Try and stay below 100 Points</div>
 
+
+   
     <div class="instructons-1">
         Enter your tool's magnitude rating and how long you used your tool to find out your points. You can keep adding different ratings and times, and the total points will keep adding up as long as the page has not been refreshed.
     </div>
-    
     <div class="cal-1">
         <div class="back-ground">
+            <label class="label-1">Enter Tool Name</label>
+            <input class="in-put-1" id="toolName" placeholder="Enter Tools Name Here">
             <label class="label-1">Enter Magnitude Rating</label>
             <input class="in-put-1" id="Vibration" placeholder="Enter Magnitude Rating Here">
             <label class="label-2">Enter Trigger Time</label>
@@ -85,10 +80,26 @@
             </div>
         </div>
     </div>
+    <div>
+        <table id="toolList">
+            <thead>
+                <tr >
+                    <th scope="col" width="12200">Tool</th>
+                    <th scope="col" width="11500">Vibration</th>
+                    <th scope="col" width="11500">Time</th>
+                    <th scope="col" width="12200">points</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody >
+                <!--Dynamic rows will appear here-->
+            </tbody>
+        </table>
+    </div>
     
     <div class="instructons-1">
         Want to know how long you can safely use your tool! <br />
-        It’s recommended to never exceed 100 points. <br />
+        It's recommended to never exceed 100 points.<br />
         This calculator will help you determine safe usage time.
     </div>
     
@@ -96,12 +107,14 @@
         <div class="back-ground-2">
             <label class="label-2">Enter Magnitude Rating</label>
             <input class="in-put-2" id="ALVInput" placeholder="Enter Magnitude Rating">
-            <output class="output" id="ALVOutput" disabled></output>
+            
             <div class="rectangle-4">
                 <div class="calculate" onclick="ALV('ALVInput', 'ALVOutput')">Calculate</div>
             </div>
         </div>
     </div>
+
+    <output class="output" id="ALVOutput" disabled></output>
     
     <script src="Script.js"></script>
 </body>
