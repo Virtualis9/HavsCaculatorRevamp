@@ -62,9 +62,7 @@
 
 
    
-    <div class="instructons-1">
-        Enter your tool's magnitude rating and how long you used your tool to find out your points. You can keep adding different ratings and times, and the total points will keep adding up as long as the page has not been refreshed.
-    </div>
+  
     <div class="cal-1">
         <div class="back-ground">
             <label class="label-1">Enter Tool Name</label>
@@ -88,19 +86,24 @@
                     <th scope="col" width="11500">Vibration</th>
                     <th scope="col" width="11500">Time</th>
                     <th scope="col" width="12200">points</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody >
                 <!--Dynamic rows will appear here-->
             </tbody>
+            <tr>
+                <th scope="col" width="12200">Total</th>
+            </tr>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
         </table>
+        <button class="rectangle-4" id="excelButton">Download Data</button>
     </div>
     
     <div class="instructons-1">
         Want to know how long you can safely use your tool! <br />
-        It's recommended to never exceed 100 points.<br />
-        This calculator will help you determine safe usage time.
     </div>
     
     <div class="cal-2">
@@ -117,5 +120,6 @@
     <output class="output" id="ALVOutput" disabled></output>
     
     <script src="Script.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
 </body>
 </html>

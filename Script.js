@@ -1,10 +1,11 @@
 let pointsHistory = []; 
 let toolHistory = [{}]
-
-
 const form = document.querySelector('.form');
 const emailError = document.getElementById('emailError');
 const trap = document.getElementById('pot');
+const exportButton = document.getElementById('excelButton');
+const table = document.getElementById('toolList');
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -200,6 +201,9 @@ function updateHistory (total) {
     }
     document.getElementById("total").value = result;
     scoreAnimation(result)
+    // updateToolHistory(result)
+    tableTotal(result)
+ 
 
 }
 
@@ -210,6 +214,7 @@ function updateToolHistory (total){
     const vibration = document.getElementById('Vibration').value;
     const time = document.getElementById('Time').value;
     const points = total;
+    // const result = document.getElementById('total').value
     const tbodyEl = document.querySelector('tbody')
     tbodyEl.innerHTML += 
         `<tr>
@@ -226,8 +231,6 @@ function updateToolHistory (total){
                 ${points}
             </td>
         </tr>`;
-
-    
     toolHistory.push({
         name: name,
         vibration: vibration,
@@ -236,8 +239,34 @@ function updateToolHistory (total){
 
     })
 
+    
+
 
 }
+
+function tableTotal(total){
+    const result = total
+    const tfooterEl = document.querySelector('tfoot')
+    tfooterEl.innerHTML =
+        `<tr>
+            <td>
+                ${result}
+            </td>
+        </tr>`
+
+
+    return 
+} 
+
+exportButton.addEventListener('click', () => {
+    /* Create worksheet from HTML DOM TABLE */
+    const wb = XLSX.utils.table_to_book(table, {sheet: 'sheet-1'});
+  
+    /* Export to file (start a download) */
+    XLSX.writeFile(wb, 'MyTable.xlsx');
+  });
+
+  
 
 function calculate (inputElementByID1, inputElementByID2){
     let vibration = document.getElementById(inputElementByID1).value

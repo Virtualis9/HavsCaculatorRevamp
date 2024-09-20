@@ -469,8 +469,8 @@ td {
 .output {
   color: #ffffff;
   padding: 20px;
-  border: 1px solid black;
-  background: green;
+  /* border: 1px solid black; */
+  background: transparent;
   text-align: center;
   font-family: Kadwa, sans-serif;
   font-size: 21.41642951965332px;
