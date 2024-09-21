@@ -1,0 +1,110 @@
+body {
+    font-family: Kadwa;
+    margin: 0;
+    background: rgb(32, 32, 32);
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding-bottom: 100px;
+    
+   
+  }
+
+  .gobackbutton{
+    color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0px;
+    right: 0; /* Align to the right */
+    width: 100%; /* Ensure the container spans the full width */
+    
+  }
+
+
+
+.small-logo,
+.small-logo * {
+  box-sizing: border-box;
+}
+.small-logo {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  height: 100px;
+  padding-left: 20px;
+}
+.small-logo-span {
+  color: #f90101;
+  font-size: 30px;
+  font-weight: 700;
+}
+.small-logo-span2 {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.saasPitch {
+    color:azure;
+    text-align: center;
+    font-size: 21.416px;
+    font-weight: 700;
+    line-height: 50px;
+    position: relative;
+    height: auto;
+    margin: 20px auto;
+    width: 65%;
+    max-width: 1100px;
+    min-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list{
+    color:azure;
+    text-align: center;
+    font-size: 21.416px;
+    font-weight: 700;
+    line-height: 50px;
+    position: relative;
+    height: auto;
+    margin: 20px auto;
+    width: 65%;
+    max-width: 1100px;
+    min-width: 1100px;
+    list-style: none;
+}
+
+form {
+    background: rgb(31, 31, 31);
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 395px;
+    height: 270px;
+    margin-bottom: 150px;
+    position: relative; /* Change from absolute to relative */
+    margin: 0 auto; /* Center align if constrained */
+    box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
+}
+
+.email-input {
+  background: rgb(17, 17, 17);
+  border-radius: 15px;
+  border: 2px solid black;
+  position: relative;
+  margin: auto;
+  width: 350px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

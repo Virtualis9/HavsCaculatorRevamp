@@ -193,6 +193,8 @@ function signUp () {
    window.location.href = 'signUp.html'
 }
 
+
+
 function updateHistory (total) {
     pointsHistory.push(Number(total))
     let result = 0
@@ -238,10 +240,6 @@ function updateToolHistory (total){
         points: points
 
     })
-
-    
-
-
 }
 
 function tableTotal(total){
@@ -266,7 +264,7 @@ exportButton.addEventListener('click', () => {
     XLSX.writeFile(wb, 'MyTable.xlsx');
   });
 
-  
+
 
 function calculate (inputElementByID1, inputElementByID2){
     let vibration = document.getElementById(inputElementByID1).value

@@ -498,6 +498,19 @@ td {
   padding: 10px;
   margin-top: 30px;
 }
+
+#excelButton {
+  color: black;
+  text-align: center;
+  font-family: Kadwa, sans-serif;
+  font-size: 21.41642951965332px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .calculate,
 .calculate * {
   box-sizing: border-box;
