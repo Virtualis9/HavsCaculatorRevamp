@@ -1,7 +1,7 @@
 body {
     font-family: Kadwa;
     margin: 0;
-    background: rgb(32, 32, 32);
+    background: rgba(32, 32, 32, 0.897);
     min-height: 100vh; /* Ensure the body takes full viewport height */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     padding-bottom: 100px;
@@ -127,6 +127,9 @@ input{
   position: relative;
   width:80%;
   height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
 }
 
 button{
@@ -147,6 +150,7 @@ button{
   margin: auto;
   cursor: pointer;
   border: none;
+  transition: background-color 0.3s ease;
 }
 
 button:hover{
@@ -155,6 +159,6 @@ button:hover{
 
 input::placeholder{
   text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.205);
   width: 100%;
 }
