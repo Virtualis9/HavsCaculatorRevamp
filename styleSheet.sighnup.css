@@ -5,8 +5,10 @@ body {
     min-height: 100vh; /* Ensure the body takes full viewport height */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     padding-bottom: 100px;
-    
-   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .gobackbutton{
@@ -36,12 +38,19 @@ body {
   box-sizing: border-box;
 }
 .small-logo {
-  text-align: left;
-  font-size: 30px;
-  font-weight: 700;
-  position: relative;
-  height: 100px;
-  padding-left: 20px;
+  color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 0px;
+    left: 0; /* Align to the right */
+    padding-left: 20px;
 }
 .small-logo-span {
   color: #f90101;
@@ -55,50 +64,43 @@ body {
 }
 
 .saasPitch {
-    color:#ffffff;
-    text-align: center;
-    font-size: 21.416px;
-    font-weight: 700;
-    line-height: 50px;
-    position: relative;
-    height: auto;
-    margin: 20px auto;
-    width: 65%;
-    max-width: 1100px;
-    min-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#ffffff;
+  text-align: center;
+  font-size: 21.416px;
+  font-weight: 700;
+  line-height: 50px;
+  position: relative;
+  height: auto;
+  width: 60%;
+  padding-bottom:20px;
+   
 }
 
-.list{
-    color:azure;
-    text-align: center;
-    font-size: 21.416px;
-    font-weight: 700;
-    line-height: 50px;
-    position: relative;
-    height: auto;
-    margin: 20px auto;
-    width: 65%;
-    max-width: 1100px;
-    min-width: 1100px;
-    list-style: none;
+h2{
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 form {
   display: flex;
   flex-direction: column;
-  background: rgb(31, 31, 31);
-  border: 2px solid black;
+  background: rgba(20, 20, 20, 0.774);
+  /* border: 2px solid black; */
   border-radius: 15px;
-  width: 30%;
-  height: 400px;
+  width: 25%;
+  height: 500px;
   margin-bottom: 150px;
   position: relative; /* Change from absolute to relative */
   margin: 0 auto; /* Center align if constrained */
-  box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
+  /* box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1); */
 }
 
 label{
@@ -121,9 +123,9 @@ input{
   margin: auto;
   background: rgb(17, 17, 17);
   border-radius: 15px;
-  border: 2px solid black;
+  border: none;
   position: relative;
-  width: 350px;
+  width:80%;
   height: 60px;
 }
 
@@ -138,12 +140,13 @@ button{
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  width: 228px;
+  width: 30%;
   height: 52px;
   position: relative;
   padding: 10px;
   margin: auto;
   cursor: pointer;
+  border: none;
 }
 
 button:hover{
@@ -153,4 +156,5 @@ button:hover{
 input::placeholder{
   text-align: center;
   color: #ffffff;
+  width: 100%;
 }
