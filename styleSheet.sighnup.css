@@ -22,8 +22,11 @@ body {
     position: absolute;
     top: 0px;
     right: 0; /* Align to the right */
-    width: 100%; /* Ensure the container spans the full width */
-    
+    cursor: pointer;
+  }
+
+  .gobackbutton:hover{
+    color: #c0c0c0;
   }
 
 
@@ -52,7 +55,7 @@ body {
 }
 
 .saasPitch {
-    color:azure;
+    color:#ffffff;
     text-align: center;
     font-size: 21.416px;
     font-weight: 700;
@@ -85,26 +88,69 @@ body {
 }
 
 form {
-    background: rgb(31, 31, 31);
-    border: 2px solid black;
-    border-radius: 15px;
-    width: 395px;
-    height: 270px;
-    margin-bottom: 150px;
-    position: relative; /* Change from absolute to relative */
-    margin: 0 auto; /* Center align if constrained */
-    box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  background: rgb(31, 31, 31);
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 30%;
+  height: 400px;
+  margin-bottom: 150px;
+  position: relative; /* Change from absolute to relative */
+  margin: 0 auto; /* Center align if constrained */
+  box-shadow: 15px 13px 31.8px -17px rgba(0, 0, 0, 1);
 }
 
-.email-input {
+label{
+  color: #ffffff;
+  text-align: center;
+  font-family: Kadwa, sans-serif;
+  font-size: 21.41642951965332px;
+  font-weight: 700;
+  position: relative;
+  height: 75px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
   background: rgb(17, 17, 17);
   border-radius: 15px;
   border: 2px solid black;
   position: relative;
-  margin: auto;
   width: 350px;
   height: 60px;
+}
+
+button{
+  color: black;
+  text-align: center;
+  font-family: Kadwa, sans-serif;
+  font-size: 21.41642951965332px;
+  font-weight: 700;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px;
+  width: 228px;
+  height: 52px;
+  position: relative;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #c0c0c0;
+}
+
+input::placeholder{
+  text-align: center;
+  color: #ffffff;
 }

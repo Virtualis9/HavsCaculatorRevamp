@@ -8,12 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
     <title>Sign-up</title>
-    <script>
-        // Define the goBack function
-        function goBack() {
-            window.history.back(); // Navigate back to the previous page
-        }
-    </script>
 </head>
 <body>
     <div class="small-logo">
@@ -21,6 +15,9 @@
             <span class="small-logo-span">HAVS</span>
             <span class="small-logo-span2">Calculator.com</span>
         </span>
+       
+    </div>
+    <div>
         <nav class="gobackbutton" onclick="goBack()">Back</nav>
     </div>
     
@@ -34,38 +31,15 @@
             efficient, and legally compliant approach to managing Hand Arm Vibration Syndrome <span class="red">(HAVS)</span> exposure.
         </span>
     </div>
-    <div class="list">
-        <h4>Key Features:</h4>
-        <ul>
-            <li>
-                <span>HSE Points System Compliance:</span> Our platform integrates with the HSE points system, 
-                allowing you to assess and manage vibration exposure accurately according to industry standards.
-            </li>
-            <li>
-                <span>Real-Time Analytics:</span> Monitor each team member's vibration exposure in real-time. 
-                Get instant insights to prevent health risks and ensure safety.
-            </li>
-            <li>
-                <span>Tool Tracking:</span> Record and manage tool usage efficiently. 
-                Our system helps you track exposure without the need for repetitive data entry, 
-                saving you time and effort.
-            </li>
-            <li>
-                <span>Compliance & Legal Documentation:</span> Keep a detailed record of HAVS exposure for legal and regulatory compliance. 
-                Generate reports easily to demonstrate your commitment to workforce safety.
-            </li>
-            <li>
-                <span>Team Management:</span> Effortlessly add and manage team members with our intuitive interface. 
-                Track individual exposure levels, ensure all employees remain within safe limits, 
-                and enable team members to submit their daily tool usage directly through the platform.
-            </li>
-        </ul>
-    </div>
-    <form>
-        <label class="email-input" for="email">Please Enter your Email</label>
-        <input name="email" type="email" required>
-        <button type="submit">Submit</button> <!-- Corrected the submit button -->
+    
+    <form id="form" method="POST" action='' name="sighnup">
+        <label for="name">Please Enter You Name</label>
+        <input class="email" name="name" type="text" placeholder="Enter Your Name Here" required>
+        <label for="email">Please Enter your Email</label>
+        <input class="email-input" name="email" type="email" placeholder="Enter Your Email Here" required>
+        <button type="submit" value="submit" id="submit">Submit</button> <!-- Corrected the submit button -->
     </form>
+
     <script src="sighnUpScript.js"></script>
 </body>
 </html>
