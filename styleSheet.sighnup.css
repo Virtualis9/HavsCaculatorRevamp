@@ -1,7 +1,7 @@
 body {
     font-family: Kadwa;
     margin: 0;
-    background: rgba(32, 32, 32, 0.897);
+    background: #141420;
     min-height: 100vh; /* Ensure the body takes full viewport height */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     padding-bottom: 100px;
@@ -92,7 +92,7 @@ h2{
 form {
   display: flex;
   flex-direction: column;
-  background: rgba(20, 20, 20, 0.774);
+  background: #252539;
   /* border: 2px solid black; */
   border-radius: 15px;
   width: 25%;
@@ -121,7 +121,7 @@ input{
   align-items: center;
   justify-content: center;
   margin: auto;
-  background: rgb(17, 17, 17);
+  background: #141420;
   border-radius: 15px;
   border: none;
   position: relative;

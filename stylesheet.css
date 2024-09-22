@@ -1,7 +1,7 @@
 body {
   font-family: Kadwa;
   margin: 0;
-  background: rgba(32, 32, 32, 0.897);
+  background: #141420;
   min-height: 100vh; /* Ensure the body takes full viewport height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 100px;
@@ -9,7 +9,7 @@ body {
 
 input {
   text-align: center;
-  color: white;
+  color:white;
   font-size: 20px;
 }
 
@@ -340,7 +340,7 @@ circle {
 
 /* Position and layout for .back-ground and other child elements */
 .back-ground {
-  background: hsla(0, 0%, 8%, 0.712);
+  background: #252539;
   border-radius: 15px;
   /* border: 2px solid black; */
   width: 395px;
@@ -352,7 +352,7 @@ circle {
 }
 
 table {
-  background: hsla(0, 0%, 8%, 0.712);
+  background: #252539;
   border-radius: 15px;
   color: white;
   padding: 20px;
@@ -411,7 +411,7 @@ td {
   border: none;
 }
 .in-put-1 {
-  background: rgb(17, 17, 17);
+  background: #141420;
   border-radius: 15px;
   position: relative;
   margin: auto;
@@ -447,7 +447,7 @@ td {
   border: none;
 }
 .in-put-2 {
-  background: rgb(17, 17, 17);
+  background:#141420;
   border-radius: 15px;
   
   position: relative;
@@ -484,7 +484,7 @@ td {
   border: none;
 }
 .in-put-3 {
-  background: rgb(17, 17, 17);
+  background: #141420;
   border-radius: 15px;
   position: relative;
   margin: auto;
@@ -558,7 +558,7 @@ td {
 }
 
 .back-ground-2 {
-  background: rgb(31, 31, 31);
+  background: #252539;
   
   border-radius: 15px;
   width: 395px;
