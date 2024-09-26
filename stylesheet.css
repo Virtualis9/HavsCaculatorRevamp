@@ -618,23 +618,23 @@ td {
  justify-content: flex-start;
  flex-direction: column;
  align-items: flex-start;
- margin-right: 20px;
 }
 
 .whyUsBox{
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   line-height: 25px;
 }
 
 .twitterPostList{
+  list-style: none;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-items: flex-end;
-  border-radius: 15px;
+  border-radius: 5px;
   position: relative;
-  margin-top: 100px;
+  margin-top: 75px;
   left: 28%;
   max-height: 600px;
   width: 100%;
@@ -677,6 +677,8 @@ td {
   left:5%;
   right:15%;
   line-height: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .dangerFeatureH2{
@@ -787,7 +789,8 @@ td {
   position: relative;
   line-height: 25px;
   width:500px;
-  right:9%
+  right:9%;
+  margin-bottom: 145px;
   
 }
 
@@ -825,7 +828,7 @@ td {
   border-radius: 5px;
   position: relative;
   margin: auto;
-  width: 95%;
+  width: 470px;
   height:30px;
   display: flex;
   align-items: flex-start;
@@ -845,7 +848,7 @@ td {
   border-radius: 5px;
   position: relative;
   margin: auto;
-  width: 95%;
+  width: 470px;
   height: 30px;
   display: flex;
   align-items: flex-start;
@@ -865,7 +868,7 @@ td {
   border-radius: 5px;
   position: relative;
   margin: auto;
-  width: 180%;
+  width: 470px;
   height: 250px;
   display: flex;
   align-items: flex-start;
