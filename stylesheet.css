@@ -177,7 +177,7 @@ a:hover {
   font-weight: bolder;
   text-align: center; 
   left: 5%;
-  font-size: x-large;
+  font-size: 30px;
   padding-top: 20px;
 }
 
@@ -242,35 +242,9 @@ ol {
   width: 500px; 
   padding: 20px; 
   box-sizing: border-box; 
-  min-height: 300px;
+  min-height: 200px;
   border-radius: 10px;
-}
-
-
-
-.rectangle-4,
-.rectangle-4 * {
-  box-sizing: border-box;
-}
-.rectangle-4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #d9d9d9;
-  border-radius: 15px;
-  width: 228px;
-  height: 52px;
-  position: relative;
-  height: auto; /* Allow flexible height */
-  margin: 20px auto;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-
-.rectangle-4:hover {
-  background-color: #c0c0c0;
+  line-height: 25px;
 }
 
 .mainContainerH2{
@@ -281,8 +255,8 @@ ol {
   font-weight: bolder;
   text-align: center; 
   left: 5%;
-  font-size: large;
-  top: 85px
+  font-size: 20px;
+  padding-top: 20px;
 }
 
 .mainContainer{
@@ -316,7 +290,7 @@ ol {
 .calinput1{
   display: flex;
   flex-direction: column;
-
+  padding-bottom: 20px;
 }
 
 .label-1,
@@ -329,6 +303,7 @@ ol {
   font-family: Kadwa, sans-serif;
   font-size: 21.41642951965332px;
   font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .in-put-1,
@@ -351,6 +326,7 @@ ol {
   display: flex;
   flex-direction: column;
   flex:1;
+  padding-bottom: 20px;
 }
 
 .label-2,
@@ -364,6 +340,7 @@ ol {
   font-size: 21.41642951965332px;
   font-weight: 700;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .in-put-2,
@@ -385,6 +362,7 @@ ol {
   display: flex;
   flex-direction: column;
   flex:1;
+  padding-bottom: 20px;
 }
 
 .label-3,
@@ -398,6 +376,7 @@ ol {
   font-size: 21.41642951965332px;
   font-weight: 700;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .in-put-3,
@@ -433,6 +412,7 @@ ol {
   font-size: 21.41642951965332px;
   font-weight: 700;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .in-put-4 {
@@ -579,10 +559,14 @@ td {
 }
 
 .whyUsList{
- list-style: none;
  color: #ffffff;
  margin: 0 0;
  padding-left: 110px;
+}
+
+.whyUsBox{
+  margin-bottom: 50px;
+  line-height: 25px;
 }
 
 .twitterPostList{
