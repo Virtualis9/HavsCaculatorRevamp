@@ -7,9 +7,10 @@ body {
   padding-bottom: 100px;
 }
 
+
 input {
   text-align: center;
-  color:#141420;
+  color:#ffffff;
   font-size: 20px;
 }
 
@@ -60,6 +61,7 @@ input:focus{
   width: 100%;
   border-radius: 10px;
   filter: brightness(100%);
+  background-color: rgba(20, 20, 32, 0.7); /* Optional: semi-transparent background */
 }
 
 /* Small Logo Styles */
@@ -489,8 +491,19 @@ ol {
   background-color: #aaaaaa;
 }
 
+.toolList{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 table {
+
   background-color:  hsl(240, 22%, 18%);
+  display: flex;
+  flex-direction: column;
   border-radius: 15px;
   color: white;
   position: relative;
@@ -501,7 +514,7 @@ table {
   margin-top: 50px;
   z-index:2 ;
   bottom: 10px;
-  right: 270px;
+  margin-top: 150px;
 }
 
 td {
@@ -527,7 +540,6 @@ td {
   font-size: larger;
 }
 
-
 #excelButton {
   color: black;
   text-align: center;
@@ -540,7 +552,7 @@ td {
   justify-content: center;
   z-index:3 ;
   bottom: 115px;
-  left: 70px
+
 }
 
 .awarnessSection{
@@ -567,7 +579,7 @@ td {
  padding-left: 110px;
 }
 
-.twiterPostList{
+.twitterPostList{
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -583,7 +595,7 @@ td {
   list-style: none;
 }
 
-.twiterPostList::-webkit-scrollbar {
+.twitterPostList::-webkit-scrollbar {
   height: 5px; /* Height of the horizontal scrollbar */
   border-radius: 5px;
   background-color: transparent;
@@ -591,16 +603,16 @@ td {
   align-items: center;
 }
 
-.twiterPostList::-webkit-scrollbar-thumb {
+.twitterPostList::-webkit-scrollbar-thumb {
   background-color:transparent /* Color of the scrollbar handle */
   
 }
 
-.twiterPostList::-webkit-scrollbar-track {
+.twitterPostList::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-.twiterPostList::-webkit-scrollbar-button {
+.twitterPostList::-webkit-scrollbar-button {
   background-color: transparent;
 }
 .twitter-tweet{
@@ -669,7 +681,7 @@ td {
   width: 50%
 }
 
-.whyConsiderDataTrackignList{
+.whyConsiderDataTrackingList{
   display: flex; /* Use flex to maintain proper alignment */
   justify-content: center; /* Center content inside */
   align-items: center; /* Vertically center content if needed */
@@ -690,21 +702,143 @@ td {
   box-sizing: border-box; 
   min-height: 100px;
   border-radius: 10px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
+}
+
+
+.getInTouchH2{
+  color: #ffffff;
+}
+
+.getInTouchContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  height: 600px;
+
 }
 
 .getInTouch{
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 0 auto;
-  text-align: center;
-  margin-bottom: 150px;
+  text-align: left;
+  margin-bottom: 50px;
+  position: relative;
+  width:40%
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 15px;
+  width: 25%;
+  height: 325px;
+  position: relative; 
+  margin-bottom: 50px;
+  width: 40%
+}
+
+.formH2{
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formInputArea{
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+.name{
+  border: 1px solid white;
+  background:#141420;
+  border-radius: 5px;
+  position: relative;
+  margin: auto;
+  width: 180%;
+  height:30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  text-align: left;
+  padding:10px;
+  
+}
+
+.name::placeholder{
+  padding: 10px;
+}
+.email-input{
+  border: 1px solid white;
+  background: #141420;
+  border-radius: 5px;
+  position: relative;
+  margin: auto;
+  width: 180%;
+  height: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  text-align: left;
+  padding:10px;
+}
+
+.email-input::placeholder{
+  padding:10px;
+}
+
+.textarea{
+  border: 1px solid white;
+  background: #141420;
+  border-radius: 5px;
+  position: relative;
+  margin: auto;
+  width: 180%;
+  height: 250px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  text-align: left;
+  padding:10px;
+}
+
+textarea::placeholder{
+  padding:10px;
+}
+
+
+.submitButton{
+  display: flex;
+  background: #d9d9d9;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-weight: bolder;
+  font-size: x-large;
+  
+}
 .tryUsNow{
   color: #ffffff;
   display: flex;
@@ -714,7 +848,9 @@ td {
   width: 50%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 150px;
 }
+
 
 @media (max-width: 1162px) {
   .p-1 {
