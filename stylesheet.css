@@ -1,10 +1,14 @@
 body {
-  font-family: Kadwa;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   background: #141420;
   min-height: 100vh; /* Ensure the body takes full viewport height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 100px;
+}
+
+.havsSpan{
+  color: #f90101;
 }
 
 
@@ -43,7 +47,7 @@ input:focus{
   left: 0; 
   right: 0; 
   bottom: 0; 
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for darkening */
+  background-color: rgba(0, 0, 0, 0.70); /* Semi-transparent black for darkening */
   z-index: 1; /* Set below the content */
   backdrop-filter: blur(5px); 
 }
@@ -115,7 +119,7 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: column; 
-  justify-content: center;
+  justify-content: flex;
 }
 .h-1-span {
   color: #ffffff;
@@ -142,10 +146,12 @@ a:hover {
   flex-direction: column;
   justify-content: center; 
   align-items: center;
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center; 
   border:none;
+  font-size: x-large;
+  letter-spacing: 0.5px;
 }
 
 .intro-span {
@@ -852,157 +858,3 @@ textarea::placeholder{
 }
 
 
-@media (max-width: 1162px) {
-  .p-1 {
-    max-width: 500px;
-    min-width: 500px;
-  }
-}
-
-@media (max-width: 620px) {
-  input::placeholder {
-    font-size: 12.5px;
-  }
-
-  .small-logo {
-    font-size: 30px;
-  }
-
-  .small-logo-span {
-    font-size: 20px;
-  }
-
-  .small-logo-span2 {
-    font-size: 15px;
-  }
-
-  .h-1 {
-    font-size: 40px; /* Make the font size larger */
-    line-height: 0.1;
-    margin-bottom: 10px; /* Remove any extra margins */
-    padding: 0; /* Remove any padding */
-    height: auto; /* Ensure dynamic height */
-  }
-
-  .h-1-span,
-  .h-1-span2,
-  .h-1-span3 {
-    font-size: 60px; /* Consistent font size for all spans */
-    line-height: 1; /* Tighten up the spacing between spans */
-    margin: 0; /* Remove margin between spans */
-    padding: 0; /* Remove padding between spans */
-  }
-
-  .p-1 {
-    font-size: 15px;
-    line-height: 30px;
-    margin-top: 0; /* Ensure no top margin to bring closer to .h-1 */
-    margin-bottom: 0px; /* Adjust bottom margin if needed */
-    min-width: 350px;
-    max-width: 350px;
-  }
-  .rectangle-4 {
-    width: 150px;
-    height: 35px;
-  }
-  .sign-up-here {
-    font-size: 15.5px;
-  }
-
-  .back-ground {
-    width: 250px;
-    height: auto; /* Let the background size adjust dynamically */
-    display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Horizontal centering */
-    justify-content: center; /* Vertical centering */
-    position: relative; /* Ensure positioning relative to the container */
-    margin: 0 auto; /* Center the background itself */
-  }
-
-  .label-1 {
-    font-size: 15.416px;
-    margin: 0 auto; /* Automatically adjust the margins */
-    text-align: center; /* Ensure the text inside is centered */
-    width: 100%; /* Ensure it takes up full width */
-    height: auto; /* Let it size automatically */
-  }
-
-  .in-put-1 {
-    width: 200px;
-    height: 40px;
-  }
-
-  .label-2 {
-    font-size: 15.416px;
-    margin: 0 auto; /* Automatically adjust the margins */
-    text-align: center; /* Ensure the text inside is centered */
-    width: 100%; /* Ensure it takes up full width */
-    height: auto; /* Let it size automatically */
-  }
-  .in-put-2 {
-    width: 200px;
-    height: 40px;
-  }
-  .label-3 {
-    font-size: 15.416px;
-    margin: 0 auto; /* Automatically adjust the margins */
-    text-align: center; /* Ensure the text inside is centered */
-    width: 100%; /* Ensure it takes up full width */
-    height: auto; /* Let it size automatically */
-  }
-  .in-put-3 {
-    width: 200px;
-    height: 40px;
-  }
-
-  .output {
-    font-size: 15.416px;
-  }
-  .back-ground-2 {
-    width: 250px;
-    height: auto; /* Let the background size adjust dynamically */
-    display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Horizontal centering */
-    justify-content: center; /* Vertical centering */
-    position: relative; /* Ensure positioning relative to the container */
-    margin: 0 auto; /* Center the background itself */
-  }
-
-  @media (max-width: 400px) {
-    .h-1 {
-      font-size: 30px; /* Make the font size larger */
-      line-height: 0.1;
-      margin-bottom: 10px; /* Remove any extra margins */
-      padding: 0; /* Remove any padding */
-      height: auto; /* Ensure dynamic height */
-    }
-
-    .h-1-span,
-    .h-1-span2,
-    .h-1-span3 {
-      font-size: 40px; /* Consistent font size for all spans */
-      line-height: 1; /* Tighten up the spacing between spans */
-      margin: 0; /* Remove margin between spans */
-      padding: 0; /* Remove padding between spans */
-    }
-
-    .p-1 {
-      font-size: 15px;
-      line-height: 30px;
-      margin-top: 0; /* Ensure no top margin to bring closer to .h-1 */
-      margin-bottom: 0px; /* Adjust bottom margin if needed */
-      min-width: 250px;
-      max-width: 250px;
-    }
-
-    .instructons-1 {
-      padding-top: 20px;
-      font-size: 10px;
-      max-width: 150px;
-      min-width: 50px;
-      line-height: 15px;
-    }
-  }
-}
