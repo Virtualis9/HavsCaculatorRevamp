@@ -5,6 +5,7 @@ body {
   min-height: 100vh; /* Ensure the body takes full viewport height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 100px;
+  min-height: 100vh;
 }
 
 .havsSpan{
@@ -34,19 +35,26 @@ input:focus{
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* No tiling */
-  height: 1000px; /* Height of the section */
+  height:auto; /* Height of the section */
   position: relative; /* Allows absolute positioning of child elements */
   overflow: hidden; /* Ensure child elements don't overflow */
+  width: auto
+}
+
+@media(max-width:1120px){
+  .topBackGround{
+    min-height: 1150%;
+  }
 }
 
 /* Pseudo-element for darkening the background */
 .topBackGround::before {
   content: ""; 
   position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
+  top: 0%; 
+  left: 0%; 
+  right: 0%; 
+  bottom: 0%; 
   background-color: rgba(0, 0, 0, 0.70); /* Semi-transparent black for darkening */
   z-index: 1; /* Set below the content */
   backdrop-filter: blur(5px); 
@@ -56,24 +64,137 @@ input:focus{
   position: relative; /* Position content relative to the parent */
   z-index: 2; /* Above the dark overlay */
 }
-.navBar {
+
+
+nav {
   position: fixed; 
-  align-items: center;
-  justify-content: center;
   backdrop-filter: blur(10px); 
   z-index: 1000; 
-  width: 100%;
-  border-radius: 10px;
   filter: brightness(100%);
-  background-color: rgba(20, 20, 32, 0.7); /* Optional: semi-transparent background */
+  background-color: rgba(20, 20, 32, 0.801);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.397);
+  width: 100%;
+}
+
+nav ul {
+  width: 97%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.sideBar a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+
+nav li:first-child {
+  display: flex;
+  margin-right: auto;
+  position: relative;
+  right: 2.5%
+}
+
+
+
+.sideBar {
+  position: fixed;
+  margin: 0 0;
+  top: 0;
+  right: 0;
+  height: 250px;
+  width: 250px; /* Adjusted width */
+  z-index: 999;
+  background-color: rgba(20, 20, 32, 0.808);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); 
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0; /* Ensure no padding inside the sidebar */
+}
+
+.sideBar li {
+  display: flex;
+  width: 100%;
+  margin-left:0; /* Remove any default margin */
+  padding: 0; /* Remove any padding that could cause extra space */
+  list-style: none; /* Optional: removes default list styles */
+  align-items: center;
+  justify-content: center;
+}
+
+.sideBar li:first-child{
+  background-color: rgba(20, 20, 32, 0.7);
+}
+
+.sideBar a {
+  width: 100%;
+  margin-left: 20px; /* Remove any default margin */
+  padding: 0; /* Ensure no padding that could cause a gap */
+  text-align: left; /* Align text to the left inside the anchor */
+  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+.menuButton{
+  display: none;
+  
+}
+
+@media(max-width: 1000px){
+  .hideOnMobile{
+    display: none;
+  }
+
+  .menuButton{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px
+  }
+
+  nav li:first-child {
+    display: flex;
+    margin-right: auto;
+    position: relative;
+    right: 5%
+
+  }
+}
+
+@media(max-width: 450px){
+  .sideBar{
+    width:100%
+  }
+ 
 }
 
 /* Small Logo Styles */
 .small-logo {
   display: flex; /* Flexbox layout */
   justify-content: space-between; /* Space between logo and links */
-  align-items: center; 
-  padding: 20px; 
+  font-size: xx-large;
+  background: transparent;
 }
 
 /* Logo Text Styles */
@@ -83,26 +204,28 @@ input:focus{
   font-weight: 700; /* Bold font */
 }
 
-.small-logo-span2 {
-  color: #ffffff; /* White color */
-  font-size: 25px; /* Font size */
-  font-weight: 700; /* Bold font */
+.small-logo:hover{
+  background: transparent;
+  cursor: default;
 }
+ @media(max-width:500px){
+  .small-logo {
+    font-size: large;
+  }
+  .small-logo-span{
+    font-size: large;
+  }
 
-/* Hyperlink Styles */
-.hyperLink {
-  display: flex; /* Flex layout */
-  align-items: center; /* Center vertically */
-}
+ }
 
-a {
-  color: #ffffff; /* White text */
-  text-decoration: none; /* No underline */
-  padding-right: 30px; /* Space between links */
-}
+ @media(max-width:290px){
+  .small-logo {
+  display: none;
+  }
+  .small-logo-span{
+    font-size: small;
+  }
 
-a:hover {
-  color: #c0c0c0; /* Light gray on hover */
 }
 
 .h-1,
@@ -111,15 +234,25 @@ a:hover {
 }
 
 .h-1 {
-  margin-top: 150px;
-  text-align: center;
+  margin-top: 50px;
   font-size: 100px;
   line-height: 112px;
   font-weight: 700;
   position: relative;
   display: flex;
   flex-direction: column; 
-  justify-content: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-1-spanH1{
+  color: #ffffff;
+  font-size: 95px;
+  line-height: 112px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .h-1-span {
   color: #ffffff;
@@ -136,8 +269,123 @@ a:hover {
 .h-1-span3 {
   color: #ffffff;
   font-size: 95px;
-  line-height: 112px;
+  line-height: 70px;
   font-weight: 700;
+}
+
+@media(max-with:1200){
+  .h-1-spanH1{
+    color: #ffffff;
+    font-size: 95px;
+    line-height: 70px;
+    font-weight: 700;
+  }
+  .h-1-span {
+    color: #ffffff;
+    font-size: 95px;
+    line-height: 70px;
+    font-weight: 700;
+  }
+  .h-1-span2 {
+    color: #f90101;
+    font-size: 100px;
+    line-height: 75px;
+    font-weight: 700;
+  }
+  .h-1-span3 {
+    color: #ffffff;
+    font-size: 95px;
+    line-height: 70px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
+
+@media(max-width: 700px){
+  .h-1-spanH1{
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+  }
+  .h-1-span {
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+  }
+  .h-1-span2 {
+    color: #f90101;
+    font-size: 65px;
+    line-height: 70px;
+    font-weight: 700;
+  }
+  .h-1-span3 {
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
+
+@media(max-width:500px){
+
+  .h-1-spanH1{
+   
+    font-size: 40px;
+    line-height: 50px;
+   
+  }
+  .h-1-span {
+    
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .h-1-span2 {
+   
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .h-1-span3 {
+    
+    font-size: 40px;
+    line-height: 50px;
+
+  }
+
+}
+
+@media(max-width:300px){
+  .h-1-spanH1{
+   
+    font-size: 35px;
+    line-height: 40px;
+  }
+  
+  .h-1-span {
+    
+    font-size: 35px;
+    line-height: 40px;
+  }
+  
+  .h-1-span2 {
+   
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .h-1-span3 {
+    
+    font-size: 35px;
+    line-height: 40px;
+
+  }
 }
 
 .intro {
@@ -146,17 +394,41 @@ a:hover {
   flex-direction: column;
   justify-content: center; 
   align-items: center;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
   text-align: center; 
   border:none;
   font-size: x-large;
   letter-spacing: 0.5px;
+  margin-bottom: 150px;
 }
 
 .intro-span {
   font-weight: bold;
   letter-spacing: 2px;;
+}
+
+@media(max-width: 1120px){
+  .intro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    text-align: center; 
+    border:none;
+    font-size: x-large;
+    letter-spacing: 0.5px;
+    margin-bottom: 250px;
+  }
+  
+  .intro-span {
+    font-weight: bold;
+    letter-spacing: 2px;;
+  }
+  
 }
 
 .keyFeatureContainer {
@@ -569,6 +841,7 @@ table {
   width: 50%;
   height: 350px;
   margin-bottom: 7%;
+  overflow-x: auto;
 }
 
 td {
