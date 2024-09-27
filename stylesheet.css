@@ -41,11 +41,11 @@ input:focus{
   width: auto
 }
 
-@media(max-width:1120px){
+/* @media(max-width:1120px){
   .topBackGround{
     min-height: 1150%;
   }
-}
+} */
 
 /* Pseudo-element for darkening the background */
 .topBackGround::before {
@@ -421,7 +421,7 @@ nav li:first-child {
     border:none;
     font-size: x-large;
     letter-spacing: 0.5px;
-    margin-bottom: 250px;
+    margin-bottom: 75px;
   }
   
   .intro-span {
@@ -429,6 +429,18 @@ nav li:first-child {
     letter-spacing: 2px;;
   }
   
+}
+
+@media(max-width:700px){
+  .intro{
+    font-size: large;
+  }
+}
+
+@media(max-width:500px){
+  .intro{
+    font-size:12px
+  }
 }
 
 .keyFeatureContainer {
@@ -452,6 +464,11 @@ nav li:first-child {
   font-size: 30px;
   padding-top: 20px;
 }
+@media(max-width: 500px){
+  .featureH2{
+    font-size: 15px;
+  }
+}
 
 .keyFeatureList {
   margin: auto;
@@ -461,9 +478,10 @@ nav li:first-child {
   align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
-  max-width: 80%; 
+  max-width: 77%; 
   padding: 0; 
   cursor: grab;
+  left:5%;
  
 }
 
@@ -484,6 +502,13 @@ nav li:first-child {
   border-radius: 10px; /* Round edges */
 }
 
+@media(max-width: 500px){
+  .keyFeatureList::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the scrollbar handle */
+    
+  }
+}
+
 .keyFeatureList::-webkit-scrollbar-track {
   background-color: transparent;
 
@@ -501,7 +526,6 @@ nav li:first-child {
 /* Ensure ol tag takes up full width of the container */
 ol {
   display: inline-flex; /* Horizontal alignment */
-
 }
 
 .box1 {
@@ -519,6 +543,19 @@ ol {
   line-height: 25px;
 }
 
+
+@media(max-width: 500px){
+  .box1{
+    width: 250px;
+  }
+}
+
+@media(max-width: 300px){
+  .box1{
+    width: 125px 
+  }
+}
+
 .mainContainerH2{
   display: flex;
   justify-content: flex-start;
@@ -531,24 +568,34 @@ ol {
   padding-bottom: 25px;
 }
 
+
 .mainContainer{
   display: flex;
   flex-direction: row;
-  
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 1000px;
+  overflow: hidden;
 }
+
+@media(max-width:1150px){
+.mainContainer{
+  flex-direction: column;
+}
+}
+
+
 .calculateContainer{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width:25%;
   height: 700px;
-  margin-top: 8%;
-  margin-bottom: 30%;
-  margin-left: 15%;
 
 }
+
 
 /* Position and layout for .back-ground and other child elements */
 .back-ground {
@@ -877,11 +924,10 @@ td {
 .whyUsContainer{
   display: flex;
   flex-direction: column;
-  width:40%;
   border-radius: 15px;
   position: relative;
-  margin-left: 12%;
-  height: 450px;
+  height: 900px;
+
 }
 
 .whyUsList{
@@ -891,10 +937,27 @@ td {
  justify-content: flex-start;
  flex-direction: column;
  align-items: flex-start;
+ overflow-y: scroll;
+ overflow-x: hidden;
+ height: 900px;
+}
+
+.whyUsList::-webkit-scrollbar{
+  background-color: transparent;
 }
 
 .whyUsBox{
-  margin-bottom: 25px;
+  margin: 10px; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  background: #252539;
+  text-align: center;
+  width: 500px; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  min-height: 225px;
+  border-radius: 10px;
   line-height: 25px;
 }
 
