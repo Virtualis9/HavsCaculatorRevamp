@@ -5,6 +5,10 @@ const emailError = document.getElementById('emailError');
 const trap = document.getElementById('pot');
 const exportButton = document.getElementById('excelButton');
 const table = document.getElementById('toolList');
+const slider1 = document.getElementById('keyFeatureList');
+let isDown = false;
+let startX;
+let scrollLeft;
 
 
 function showSideBar(){
@@ -16,6 +20,33 @@ function closeSideBar(){
     const sidebar = document.getElementById('sideBar')
     sidebar.style.display = 'none'
 }
+
+slider1.addEventListener('mousedown', (e) =>{
+    isDown = true
+    slider1.classList.add('active');
+    startX = e.pageX - slider1.offsetLeft;
+    scrollLeft = slider1.scrollLeft
+});
+
+slider1.addEventListener('mouseLeave', () =>{
+    isDown = false;
+    slider1.classList.remove('active');
+});
+
+slider1.addEventListener('mouseup', () =>{
+    isDown = false
+    slider1.classList.remove('active');
+})
+
+slider1.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider1.offsetLeft;
+    const walk = (x - startX) 
+    slider1.scrollLeft = scrollLeft - walk;
+    console.log(walk)
+
+})
    
 
 
