@@ -1,11 +1,13 @@
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  margin: 0 0;
   background: #141420;
   min-height: 100vh; /* Ensure the body takes full viewport height */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 100px;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .havsSpan{
@@ -443,6 +445,43 @@ nav li:first-child {
   }
 }
 
+.mainContainerH2copy{
+  display: none;
+  justify-content: flex-start;
+  position: relative;
+  color: #ffffff;
+  font-weight: bolder;
+  text-align: center; 
+  left: 5%;
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+
+@media(max-width:500px){
+  .mainContainerH2copy{
+    font-size: 11px;
+  }
+}
+
+.keyFeatureContainercopy {
+  color: white;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  height: 350px;
+  margin-bottom: 50px;
+  
+}
+
+@media(max-width:1000px){
+  .keyFeatureContainercopy{
+    display: flex;
+  }
+  .mainContainerH2copy{
+    display: flex;
+  }
+}
+
 .keyFeatureContainer {
   color: white;
   display: flex;
@@ -452,6 +491,7 @@ nav li:first-child {
   margin-bottom: 50px;
   
 }
+
 
 .featureH2{
   display: flex;
@@ -470,6 +510,55 @@ nav li:first-child {
   }
 }
 
+.keyFeatureListcopy {
+  margin: auto;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 77%; 
+  padding: 0; 
+  cursor: grab;
+  left:5%;
+ 
+}
+
+.keyFeatureListcopy::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+.box1copy {
+  margin: 10px; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  background: #252539;
+  text-align: center;
+  width: 500px; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  min-height: auto;
+  border-radius: 10px;
+  line-height: 25px;
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@media(max-width:500px){
+  .box1copy{
+    width: 400px;
+    line-height: 25px;
+  }
+    
+  
+}
+
+
+
 .keyFeatureList {
   margin: auto;
   display: flex; 
@@ -482,6 +571,7 @@ nav li:first-child {
   padding: 0; 
   cursor: grab;
   left:5%;
+  
  
 }
 
@@ -581,25 +671,22 @@ ol {
   height: 1000px;
   overflow: hidden;
 }
-
-@media(max-width:1150px){
-.mainContainer{
-  flex-direction: column;
-}
-}
-
-
+ 
 .calculateContainer{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  width:25%;
-  height: 700px;
-
+  min-width: auto;
+  min-height: auto;
 }
 
+@media(max-width:1000px){
+  .calculateContainer{
+    justify-content: center;
+  }
+}
 
 /* Position and layout for .back-ground and other child elements */
 .back-ground {
@@ -845,7 +932,6 @@ input[type="date"]{
 }
 
 .nameAndDateinput1Input{
-  border: 1px solid white;
   background: #141420;
   border-radius: 5px;
   position: relative;
@@ -889,10 +975,14 @@ table {
   color: white;
   position: relative;
   margin: 0 auto;
-  width: 50%;
-  height: 350px;
+  width: 80%;
+  min-height: 500px;
+  height: auto;
   margin-bottom: 7%;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-collapse: collapse; /* Ensures borders are joined together */
+  
 }
 
 td {
@@ -901,21 +991,37 @@ td {
   text-decoration: none;
 }
 
+th {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .tableRows {
   padding-bottom: 5px;
   text-decoration: underline;
-  height: 70px;
+  height: 20px;
   font-weight: bold;
   font-size: larger;
+ 
+  border-radius: 10px;
+  width: 80%;
+  padding: 200px;
+  
 }
 
 .footerRows{
-  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  position: absolute; /* Position the footer absolutely */
+  bottom: 75px; /* Align to the bottom */
+  left: 20px; /* Align to the left */
+  width: 100%; /* Ensure it spans the width of the table */
+  text-align: center; /* Center text inside the footer */
+  padding: 5px; /* Add some padding if needed */
+  background-color: hsl(240, 22%, 18%); /* Match table background */
   text-decoration: underline;
-  height: 70px;
-  font-weight: bold;
-  font-size: larger;
 }
+
 
 .awarnessSection{
   display: flex;
@@ -925,6 +1031,8 @@ td {
   margin-left: 7%;
 }
 
+
+
 .whyUsContainer{
   display: flex;
   flex-direction: column;
@@ -932,6 +1040,18 @@ td {
   position: relative;
   height: 900px;
 
+}
+
+@media(max-width:1000px){
+  .whyUsContainer{
+    display: none;
+    flex-direction: column;
+    border: 22px solid white
+  }
+
+  .mainContainerH2{
+    display: none;
+  }
 }
 
 .whyUsList{
@@ -944,6 +1064,10 @@ td {
  overflow-y: scroll;
  overflow-x: hidden;
  height: 900px;
+ user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .whyUsList::-webkit-scrollbar{
@@ -964,6 +1088,24 @@ td {
   border-radius: 10px;
   line-height: 25px;
 }
+
+@media(max-width:1150px){
+  .whyUsBox{
+    margin: 10px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background: #252539;
+    text-align: center;
+    width: 350px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    min-height: auto;
+    border-radius: 10px;
+    line-height: 25px;
+  }
+}
+
 
 .twitterPostList{
   list-style: none;
@@ -1250,5 +1392,4 @@ textarea::placeholder{
   margin-top: 150px;
   line-height: 25px;
 }
-
 

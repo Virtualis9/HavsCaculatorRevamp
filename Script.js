@@ -48,9 +48,6 @@ slider1.addEventListener('mousemove', (e) => {
 
 })
    
-
-
-
 function updateHistory (total) {
     pointsHistory.push(Number(total))
     let result = 0
@@ -61,8 +58,6 @@ function updateHistory (total) {
     scoreAnimation(result)
     // updateToolHistory(result)
     tableTotal(result)
- 
-
 }
 
 
@@ -119,7 +114,6 @@ function tableTotal(total){
 //     /* Export to file (start a download) */
 //     XLSX.writeFile(wb, 'MyTable.xlsx');
 //   });
-
 
 
 function calculate (inputElementByID1, inputElementByID2){
