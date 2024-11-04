@@ -147,7 +147,7 @@
     <div class="mainContainer">
         <div class="whyUsContainer">
             <div>
-                <ol class="whyUsList">
+                <ol id="whyUsList" class="whyUsList">
                     <li class="whyUsBox">
                         <strong>Enter The Date</strong>
                         <p>
@@ -212,7 +212,7 @@
                     </div>
                     <div class="calinput1">    
                         <label class="label-1">Tool Name</label>
-                        <input class="in-put-1" id="Name" placeholder="Enter Tool Name Here">
+                        <input class="in-put-1" id="ToolName" placeholder="Enter Tool Name Here">
                     </div>
                     <div class="calinput2">    
                         <label class="label-2">Magnitude Rating</label>
@@ -232,7 +232,7 @@
                         </div>
                     </div>
                     <div class="calButton1">
-                        <button class="calculatebutton">Clear</button>
+                        <button onclick="clearButton()" class="calculatebutton">Clear</button>
                     </div>
                 </div>
             </div>
@@ -243,32 +243,22 @@
             <table>
                 <thead>
                     <tr class="tableRows" >
-                        <th scope="col" width="500">Date</th>
-                        <th scope="col" width="1000">Name</th>
-                        <th scope="col" width="1000">Tool</th>
-                        <th scope="col" width="500">Vibration</th>
-                        <th scope="col" width="500">Time</th>
-                        <th scope="col" width="500">points</th>
+                        <th scope="col" width="250">Date</th>
+                        <th scope="col" width="500">Name</th>
+                        <th scope="col" width="500">Tool</th>
+                        <th scope="col" width="250">Vibration</th>
+                        <th scope="col" width="250">Time</th>
+                        <th scope="col" width="250">points</th>
+                        <th scope="col" width="250px">Total points</th>
                     </tr>
                 </thead>
                 <tbody >
                     <!-- empty for dynamic input -->
                 </tbody>
-              
-                <tfoot>
-                    <tr class="footerRows">
-                        <div class="total">
-                            <th scope="col" width="110px">points Total</th>
-                        </div>
-                       
-                        <div>
-                            <th class="download" scope="col" width="200px"><a href="#">Download Report</a></th>
-                        </div>
-                    </tr>
-                </tfoot>
             </table>
         </div>
     </div>
+    <button class="download" id="downloadButton" href="#">Download Report </button>
     <div class="awarnessSection">
         <div class="whyUsSectioncontainer">
             <div class="twitterPostList">
@@ -388,7 +378,6 @@
                     <input class="name" name="name" type="text" placeholder="Enter Your Name Here" required>
                     <input class="email-input" name="email" type="email" placeholder="Enter Your Email Here" required>
                     <textarea class="textarea" placeholder="Enter Your Message Here">
-
                     </textarea>
                 </div>
                 <button class="submitButton" type="submit" value="submit" id="submit">Submit</button> 

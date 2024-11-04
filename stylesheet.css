@@ -967,60 +967,63 @@ input[type="date"]{
 
 
 table {
-  background-color:  hsl(240, 22%, 18%);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  background-color: hsl(240, 22%, 18%);
+  width: 80%;
   border-radius: 10px;
   color: white;
-  position: relative;
   margin: 0 auto;
-  width: 80%;
-  min-height: 500px;
-  height: auto;
   margin-bottom: 7%;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: auto;
   border-collapse: collapse; /* Ensures borders are joined together */
+  min-height: 50px;
+}
+
+td, th {
+  padding: 10px; /* Uniform padding for table cells */
+  text-align: center; /* Align text to the left */
+  max-height: 500px;
+  overflow-y:auto;
   
 }
 
 td {
-  text-align: center;
-  padding-bottom: 10px;
-  text-decoration: none;
+  line-height: 20px;
 }
 
 th {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  background-color: hsl(240, 22%, 25%); /* Example of a different background color for headers */
+  font-weight: bold;
 }
 
 .tableRows {
-  padding-bottom: 5px;
-  text-decoration: underline;
-  height: 20px;
   font-weight: bold;
   font-size: larger;
- 
+  text-decoration: none;
   border-radius: 10px;
-  width: 80%;
-  padding: 200px;
-  
 }
 
-.footerRows{
+.download {
   display: flex;
   justify-content: center;
-  position: absolute; /* Position the footer absolutely */
-  bottom: 75px; /* Align to the bottom */
-  left: 20px; /* Align to the left */
-  width: 100%; /* Ensure it spans the width of the table */
-  text-align: center; /* Center text inside the footer */
-  padding: 5px; /* Add some padding if needed */
-  background-color: hsl(240, 22%, 18%); /* Match table background */
-  text-decoration: underline;
+  align-items: center;
+  background: #d9d9d9;
+  border-radius: 5px;
+  width: 200px;
+  height: 75px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
 }
+.download:hover{
+  background-color: #a8a8a8;
+}
+
 
 
 .awarnessSection{
@@ -1028,10 +1031,8 @@ th {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 7%;
+  margin-left: 7%;  
 }
-
-
 
 .whyUsContainer{
   display: flex;
@@ -1039,7 +1040,7 @@ th {
   border-radius: 15px;
   position: relative;
   height: 900px;
-
+  cursor: grab;
 }
 
 @media(max-width:1000px){
@@ -1150,6 +1151,7 @@ th {
 
 }
 
+
 .dangersSection{
   display: flex;
   flex-direction: column;
@@ -1184,12 +1186,42 @@ th {
   left: 250px;
 }
 
+@media (max-width: 1360px) {
+  .twitterPostList {
+    display: none;
+  }
+
+  .dangerFeatureH2 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    flex-direction: row;
+    position: fixed;
+    color: #ffffff;
+    font-weight: bolder;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .dangerInfo {
+    display: flex;
+    position: relative;
+    color: #ffffff;
+    width: 75vw; /* Full viewport width */
+    left: 0;
+    margin-left: 200%; /* Ensure no additional offset */
+  }
+  
+}
+
 .datatrackContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+
 
 .datatrackingH2{
   display: flex;
@@ -1217,11 +1249,17 @@ th {
 }
 
 .whyConsiderDataTrackingList{
-  display: flex; /* Use flex to maintain proper alignment */
-  justify-content: center; /* Center content inside */
-  align-items: center; /* Vertically center content if needed */
-  width: 80%; /* Set a reasonable width */
-  margin: 0 auto; /* Center the flex container within its parent */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  width: 80%; 
+  margin: 0 auto; 
+}
+
+@media(max-width:1245px){
+  .whyConsiderDataTrackingList{
+   margin-bottom: 250px;
+  }
 }
 
 .box2{
@@ -1241,6 +1279,51 @@ th {
   line-height: 30px;
 }
 
+@media(max-width:1250px){
+  .box2{
+    height: 250px;
+  }
+}
+
+@media(max-width:950px){
+  .box2{
+    height:300px;
+  }
+}
+
+@media(max-width:800px){
+  .box2{
+    width: 400px;
+    height:400px;
+    line-height: 25px;
+    width:700px;
+    font-size: small;
+    height:260px;
+  }
+}
+
+@media(max-width:750px){
+  .whyConsiderDataTrackingList{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    overflow-x: auto;
+    flex-direction: row;
+  }
+  .box2{
+    width: 200px;
+  }
+}
+
+@media(max-width:700px){
+  .whyConsiderDataTrackingList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right:50px
+  }
+}
 
 .getInTouchH2{
   color: #ffffff;
@@ -1256,7 +1339,6 @@ th {
   position: relative;
   height: 600px;
   left:5%
-
 }
 
 .getInTouch{
@@ -1270,10 +1352,46 @@ th {
   margin-bottom: 50px;
   position: relative;
   line-height: 25px;
-  width:500px;
-  right:9%;
-  margin-bottom: 145px;
-  
+  width: 500px;
+  right: 9%;
+  margin-bottom: 50px;
+}
+
+@media(max-width:1800px){
+  .getInTouch{
+    left: 1%;
+  }
+  .getInTouchContainer{
+    margin-right: 250px;
+  }
+}
+
+@media(max-width:1550px){
+  .getInTouch{
+    left:5%
+  }
+
+  .getInTouchContainer{
+    margin-right: 250px;
+  }
+}
+
+
+@media(max-width:1440px){
+  .getInTouch{
+    left:15%
+  }
+  .getInTouchContainer{
+    margin-right: 270px;
+  }
+}
+
+@media(max-width:1250px){
+  .getInTouchContainer{
+    margin-top: 150px;
+    flex-direction: column-reverse;
+    
+  }
 }
 
 .form {
@@ -1289,6 +1407,44 @@ th {
   left:9%
 }
 
+@media(max-width:1245px) {
+  .form{
+    margin-bottom: 400px;
+  }
+}
+
+@media(max-width:1000px){
+  .form{
+    margin-right:10%
+  }
+}
+
+@media(max-width:900px){
+  .form{
+    margin-right:18%
+  }
+}
+
+@media(max-width:800px){
+  .form{
+    margin-right: 26%
+  }
+}
+
+
+@media(max-width:700px){
+  .form{
+    margin-right:36%
+  }
+}
+
+@media(max-width:600px){
+  .form{
+    margin-right: 48%
+  }
+}
+
+
 .formH2{
   color: #ffffff;
   display: flex;
@@ -1296,12 +1452,13 @@ th {
   align-items: center;
 }
 
+
+
 .formInputArea{
   color: #ffffff;
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
 .name{
@@ -1318,12 +1475,12 @@ th {
   margin-bottom: 20px;
   text-align: left;
   padding:10px;
-  
 }
 
 .name::placeholder{
   padding: 10px;
 }
+
 .email-input{
   border: 1px solid white;
   background: #141420;
@@ -1364,7 +1521,6 @@ textarea::placeholder{
   padding:10px;
 }
 
-
 .submitButton{
   display: flex;
   background: #d9d9d9;
@@ -1378,8 +1534,27 @@ textarea::placeholder{
   transition: background-color 0.3s ease;
   font-weight: bolder;
   font-size: x-large;
-  
 }
+
+@media(max-width:600px){
+  .name{
+    width: 300px;
+  }
+
+  .email-input{
+    width:300px
+  }
+
+  .textarea{
+    width: 300px
+  }
+
+  .submitButton{
+    width: 75px;
+    font-size: medium
+  }
+}
+
 .tryUsNow{
   color: #ffffff;
   display: flex;
