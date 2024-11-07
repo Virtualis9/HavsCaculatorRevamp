@@ -274,9 +274,7 @@
                     <li>
                         <blockquote class="twitter-tweet">
                             <p lang="en" dir="ltr">Housing association fined after failing to manage exposure to vibration, resulting in a diagnosis of Hand Arm Vibration Syndrome (HAVs) for one of its employees. More here &gt; <a href="https://t.co/4QykzNzhkf">https://t.co/4QykzNzhkf</a> <a href="https://t.co/12flZajhQf">pic.twitter.com/12flZajhQf</a>
-                            </p>&mdash; Health and Safety Executive (@H_S_E) <a href="https://twitter.com/H_S_E/status/1097509292540915714?ref_src=twsrc%5Etfw">February 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
-    
-                        </script>
+                            </p>&mdash; Health and Safety Executive (@H_S_E) <a href="https://twitter.com/H_S_E/status/1097509292540915714?ref_src=twsrc%5Etfw">February 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </li>
                     <li>
                         <blockquote class="twitter-tweet">
@@ -373,14 +371,13 @@
     </div>
     <div class=getInTouchContainer>
         <div class="form">
-            <form class="" id="form" method="POST" action='' name="sighnup">
+            <form id="form" method="POST" action="https://script.google.com/macros/s/AKfycbxzTxukCi13mM5irfmfiRuv2zWZsjmWQVO7AqWvvXmwrXdZ0JxTUvYhMLKGUSOWyFV1Aw/exec" name="signup">
                 <div class="formInputArea">
                     <input class="name" name="name" type="text" placeholder="Enter Your Name Here" required>
                     <input class="email-input" name="email" type="email" placeholder="Enter Your Email Here" required>
-                    <textarea class="textarea" placeholder="Enter Your Message Here">
-                    </textarea>
+                    <textarea class="textarea" name="message" placeholder="Enter Your Message Here" required></textarea>
                 </div>
-                <button class="submitButton" type="submit" value="submit" id="submit">Submit</button> 
+                <button class="submitButton" type="submit" id="submit">Submit</button>
             </form>
         </div>
         <div class="getInTouch">
@@ -412,6 +409,32 @@
         </div>
     </div>
     <script src="Script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxzTxukCi13mM5irfmfiRuv2zWZsjmWQVO7AqWvvXmwrXdZ0JxTUvYhMLKGUSOWyFV1Aw/exec';
+            const form = document.getElementById('form');
+    
+            if (form) {
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+                    
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok.');
+                            }
+                            alert('Form submitted successfully!');
+                            window.location.href = 'index.html'; // Redirect after success
+                        })
+                        .catch(error => console.log('Error!', error.message));
+                });
+            } else {
+                console.error("Form element with ID 'form' not found.");
+            }
+        });
+    </script>    
     <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
 </body>
+
+
 </html>
