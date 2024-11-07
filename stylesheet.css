@@ -43,12 +43,6 @@ input:focus{
   width: auto
 }
 
-/* @media(max-width:1120px){
-  .topBackGround{
-    min-height: 1150%;
-  }
-} */
-
 /* Pseudo-element for darkening the background */
 .topBackGround::before {
   content: ""; 
@@ -109,15 +103,12 @@ nav a {
   color: #ffffff;
 }
 
-
 nav li:first-child {
   display: flex;
   margin-right: auto;
   position: relative;
   right: 2.5%
 }
-
-
 
 .sideBar {
   position: fixed;
@@ -247,7 +238,7 @@ nav li:first-child {
   align-items: center;
 }
 
-.h-1-spanH1{
+.h-1-spanH1 {
   color: #ffffff;
   font-size: 95px;
   line-height: 112px;
@@ -275,8 +266,9 @@ nav li:first-child {
   font-weight: 700;
 }
 
-@media(max-with:1200){
-  .h-1-spanH1{
+/* Fixed typo for max-width: 1200px */
+@media (max-width: 1200px) {
+  .h-1-spanH1 {
     color: #ffffff;
     font-size: 95px;
     line-height: 70px;
@@ -301,13 +293,11 @@ nav li:first-child {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-
   }
-
 }
 
-@media(max-width: 700px){
-  .h-1-spanH1{
+@media (max-width: 700px) {
+  .h-1-spanH1 {
     color: #ffffff;
     font-size: 60px;
     line-height: 70px;
@@ -332,37 +322,28 @@ nav li:first-child {
     font-weight: 700;
     display: flex;
     flex-direction: column;
-
   }
-
 }
 
-@media(max-width:500px){
-
-  .h-1-spanH1{
-   
-    font-size: 40px;
+@media (max-width: 500px) {
+  .h-1-spanH1 {
+    font-size: 55px;
     line-height: 50px;
-   
   }
   .h-1-span {
-    
-    font-size: 40px;
+    font-size: 55px;
     line-height: 50px;
   }
   .h-1-span2 {
-   
-    font-size: 45px;
+    font-size: 60px;
     line-height: 50px;
   }
   .h-1-span3 {
-    
-    font-size: 40px;
+    font-size: 55px;
     line-height: 50px;
-
   }
-
 }
+
 
 @media(max-width:300px){
   .h-1-spanH1{
@@ -441,7 +422,7 @@ nav li:first-child {
 
 @media(max-width:500px){
   .intro{
-    font-size:12px
+    font-size:17px
   }
 }
 
@@ -550,14 +531,11 @@ nav li:first-child {
 
 @media(max-width:500px){
   .box1copy{
-    width: 400px;
+    width: 250px;
     line-height: 25px;
   }
-    
   
 }
-
-
 
 .keyFeatureList {
   margin: auto;
@@ -572,7 +550,6 @@ nav li:first-child {
   cursor: grab;
   left:5%;
   
- 
 }
 
 .keyFeatureList:active{
@@ -965,6 +942,79 @@ input[type="date"]{
   margin-bottom: 10px;
 }
 
+@media(max-width:450px){
+
+  .in-put-1 {
+    width:250px
+  }
+
+  .in-put-2{
+    width:250px
+  }
+
+  .in-put-3{
+    width:250px
+  }
+
+  .in-put-4{
+    width:250px
+  }
+
+  input[type="date"]{
+    width:250px
+  }
+}
+
+@media(max-width:350px){
+  .label-1{
+    font-size: medium;
+  }
+
+  .label-2{
+    font-size: medium;
+  } 
+
+  .label-3{
+    font-size: medium;
+  }
+
+  .label-4{
+    font-size: medium;
+  }
+
+  .in-put-1 {
+    width:175px
+  }
+
+  .in-put-2{
+    width:175px
+  }
+
+  .in-put-3{
+    width:175px
+  }
+
+  .in-put-4{
+    width:175px
+  }
+
+  input[type="date"]{
+    width:175px
+  }
+
+  .cal1Button{
+    width:100px;
+    font-size: large
+  }
+
+  .calculatebutton{
+    width: 100px;
+    font-size: large;
+  }
+
+
+ 
+}
 
 table {
   background-color: hsl(240, 22%, 18%);
@@ -1023,8 +1073,6 @@ th {
 .download:hover{
   background-color: #a8a8a8;
 }
-
-
 
 .awarnessSection{
   display: flex;
