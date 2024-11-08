@@ -470,9 +470,7 @@ nav li:first-child {
   flex-direction: column;
   height: 350px;
   margin-bottom: 50px;
-  
 }
-
 
 .featureH2{
   display: flex;
@@ -485,6 +483,7 @@ nav li:first-child {
   font-size: 30px;
   padding-top: 20px;
 }
+
 @media(max-width: 500px){
   .featureH2{
     font-size: 15px;
@@ -503,7 +502,7 @@ nav li:first-child {
   padding: 0; 
   cursor: grab;
   left:5%;
- 
+
 }
 
 .keyFeatureListcopy::-webkit-scrollbar{
@@ -548,7 +547,7 @@ nav li:first-child {
   max-width: 77%; 
   padding: 0; 
   cursor: grab;
-  left:5%;
+  left:5%; 
   
 }
 
@@ -590,9 +589,12 @@ nav li:first-child {
   background-color: transparent; /* Change scrollbar color on hover */
 }
 
+
+
 /* Ensure ol tag takes up full width of the container */
 ol {
   display: inline-flex; /* Horizontal alignment */
+  /* animation: scroll 10s linear infinite; */
 }
 
 .box1 {
@@ -1012,8 +1014,6 @@ input[type="date"]{
     font-size: large;
   }
 
-
- 
 }
 
 table {
@@ -1034,7 +1034,6 @@ td, th {
   text-align: center; /* Align text to the left */
   max-height: 500px;
   overflow-y:auto;
-  
 }
 
 td {
@@ -1198,7 +1197,6 @@ th {
   list-style: none;
 
 }
-
 
 .dangersSection{
   display: flex;
@@ -1439,6 +1437,14 @@ th {
     margin-top: 150px;
     flex-direction: column-reverse;
     
+  }
+}
+
+@media(max-width:400px){
+  .getInTouch{
+    width:80%;
+    margin-top: 250px;
+    margin-bottom: 50px;
   }
 }
 
