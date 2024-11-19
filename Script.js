@@ -1,3 +1,4 @@
+"use strict";
 let pointsHistory = []; 
 
 const form = document.querySelector('.form');
@@ -11,6 +12,10 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
+function sanitizeInput(input){
+    
+    return input.replace(/<[^>]*>?/gm, '')
+}
 
 function showSideBar(){
     const sidebar = document.getElementById('sideBar')
@@ -68,30 +73,36 @@ slider2.addEventListener('mousemove', () =>{
     slider2.scrollUp = scrollUp - walk;    
 })
   
-
 function updateHistory (total) {
     pointsHistory.push(Number(total))
     let result = 0
     for(let i = 0; i < pointsHistory.length; i++){
         result +=pointsHistory[i]
     }
+
+   if(isNaN(result)){
+    alert('you must submit a number')
+   }else{
     document.getElementById("total").value = result;
+   }
     
-    // tableTotal(result)
+    
 }
+
+
 
 function updateToolHistory(total) {
     let toolHistory = [{}];
     let pointsHistory = [];
-    
+
     // Get input values
-    const date = document.getElementById('date').value;
-    const name = document.getElementById('name').value;
-    const toolName = document.getElementById('ToolName').value;
-    const vibration = document.getElementById('Vibration').value;
-    const time = document.getElementById('Time').value;
-    const result = document.getElementById('total').value;
-    
+    const date = sanitizeInput(document.getElementById('date').value);
+    const name = sanitizeInput(document.getElementById('name').value);
+    const toolName = sanitizeInput(document.getElementById('ToolName').value);
+    const vibration = sanitizeInput(document.getElementById('Vibration').value);
+    const time = sanitizeInput(document.getElementById('Time').value);
+    const result = sanitizeInput(document.getElementById('total').value);
+   
     // Add points to history
     pointsHistory.push(result);
 
@@ -153,8 +164,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function calculate (inputElementByID1, inputElementByID2){
-    let vibration = document.getElementById(inputElementByID1).value
-    let mins = document.getElementById(inputElementByID2).value
+    let vibration = sanitizeInput(document.getElementById(inputElementByID1).value);
+    let mins = sanitizeInput(document.getElementById(inputElementByID2).value);
     const points = (vibration * vibration) * 2
     const time = mins/60
     const total = Math.round(points * time)
@@ -176,18 +187,18 @@ function clearButton () {
 }
 
 // Action Limit Value (ALV) 
-function ALV (ALVInput, ALVOutput) {
+// function ALV (ALVInput, ALVOutput) {
     
-    const vibration = document.getElementById('ALVInput').value
-    const points = (vibration * vibration) * 2
+//     const vibration = document.getElementById('ALVInput').value
+//     const points = (vibration * vibration) * 2
  
-    const limit = 100 / points;
+//     const limit = 100 / points;
   
-    const time = Math.floor(limit * 60)
+//     const time = Math.floor(limit * 60)
  
-    document.getElementById(ALVOutput).value = `You can use this tool for ${time} minuites`
+//     document.getElementById(ALVOutput).value = `You can use this tool for ${time} minuites`
     
-    return;
+//     return;
 
-}
+// }
 
