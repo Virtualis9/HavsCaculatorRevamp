@@ -116,7 +116,7 @@ function updateToolHistory(total) {
 
     // Create a new row and insert at the top
     const newRow = document.createElement('tr');
-    newRow.innerHTML = `
+    newRow.textContent = `
         <td>${date}</td>
         <td>${name}</td>
         <td>${toolName}</td>
@@ -141,7 +141,7 @@ function updateToolHistory(total) {
 
 function tableTotal(total) {
     const totalPointsElement = document.getElementById('totalPointsArea');
-    totalPointsElement.innerHTML = `<h3>Total Points: ${total}</h3>`;
+    totalPointsElement.textContent = `<h3>Total Points: ${total}</h3>`;
     return total;
 }
 
