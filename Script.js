@@ -202,3 +202,25 @@ function clearButton () {
 
 // }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxzTxukCi13mM5irfmfiRuv2zWZsjmWQVO7AqWvvXmwrXdZ0JxTUvYhMLKGUSOWyFV1Aw/exec';
+    const form = document.getElementById('form');
+
+    if (form) {
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok.');
+                    }
+                    alert('Form submitted successfully!');
+                    window.location.href = 'index.html'; // Redirect after success
+                })
+                .catch(error => console.log('Error!', error.message));
+        });
+    } else {
+        console.error("Form element with ID 'form' not found.");
+    }
+});
